@@ -403,43 +403,12 @@ export default function VideoHeroSlider() {
                 </AnimatePresence>
             )}
 
-            {/* ── Progress bars (bottom center) ── */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2">
-                {SLIDES.map((s, i) => (
-                    <button
-                        key={s.id}
-                        onClick={() => goTo(i, i > current ? 1 : -1)}
-                        className="relative h-[3px] rounded-full overflow-hidden transition-all duration-300"
-                        style={{ width: i === current ? 56 : 20, background: 'rgba(255,255,255,0.2)' }}
-                    >
-                        {i === current && (
-                            <motion.div
-                                className="absolute inset-y-0 left-0 rounded-full"
-                                style={{ background: slide.accentColor, width: `${progress * 100}%` }}
-                            />
-                        )}
-                    </button>
-                ))}
-            </div>
-
             {/* ── Slide counter ── */}
             <div className="absolute bottom-8 right-8 md:right-16 z-30">
                 <span className="font-mono text-white/85 text-xs tracking-widest">
                     {String(current + 1).padStart(2, '0')} / {String(SLIDES.length).padStart(2, '0')}
                 </span>
             </div>
-
-            {/* ── Scroll hint ── */}
-            <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 2.5, repeat: Infinity }}
-                className="absolute bottom-8 left-8 md:left-16 z-30 flex flex-col items-center gap-1.5"
-            >
-                <span className="text-white/85 font-mono text-[8px] uppercase tracking-[0.25em] rotate-90 origin-center translate-y-4">
-                    scroll
-                </span>
-                <div className="w-px h-8 bg-gradient-to-b from-transparent to-white/20" />
-            </motion.div>
         </section>
     );
 }
