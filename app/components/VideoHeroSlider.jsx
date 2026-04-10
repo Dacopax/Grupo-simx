@@ -134,94 +134,139 @@ function SlideContent({ slide, isActive }) {
         center: 'items-center text-center',
     }[slide.textAlign];
 
+    const isRight = slide.textAlign === 'right';
+    const isLeft = slide.textAlign === 'left';
+
     const containerClass = {
-        left: 'justify-start',
-        right: 'justify-end',
-        center: 'justify-center',
+        left: 'justify-between md:flex-row-reverse',
+        right: 'justify-between md:flex-row',
+        center: 'justify-center flex-col',
     }[slide.textAlign];
 
     return (
-        <div className={`relative z-10 container mx-auto px-8 md:px-16 h-full flex ${containerClass} items-center pt-32 md:pt-44`}>
-            <div className={`flex flex-col ${alignClass} max-w-2xl`}>
-
-                {/* Tag pill */}
-                <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
-                    transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-                    className="inline-flex items-center gap-2.5 mb-6 self-start"
-                    style={{ alignSelf: slide.textAlign === 'right' ? 'flex-end' : slide.textAlign === 'center' ? 'center' : 'flex-start' }}
-                >
-                    <div
-                        className="w-1.5 h-1.5 rounded-full animate-pulse"
-                        style={{ background: slide.accentColor, boxShadow: `0 0 8px ${slide.accentColor}` }}
-                    />
-                    <span
-                        className="font-header font-black text-[11px] uppercase tracking-[0.35em]"
-                        style={{ color: slide.accentColor }}
-                    >
-                        {slide.tag}
-                    </span>
-                </motion.div>
-
-                {/* Headline */}
-                <div className="mb-3">
-                    {slide.headline.map((line, i) => (
+        <div className={`relative z-10 container mx-auto px-8 md:px-16 h-full flex items-center pt-32 md:pt-44`}>
+            <div className={`flex flex-col md:flex-row w-full ${containerClass} gap-12 items-center md:items-end`}>
+                
+                {/* Secondary Content: Stats and Button (Opposite side) */}
+                {slide.textAlign !== 'center' && (
+                    <div className={`flex flex-col ${isRight ? 'items-start text-left' : 'items-end text-right'} max-w-sm mb-20 md:mb-0 order-2 md:order-1`}>
+                        {/* Stat Block */}
                         <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 30 + i * 10 }}
-                            animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                            transition={{ duration: 0.8, delay: 0.3 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={isActive ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                            transition={{ duration: 0.6, delay: 0.8 }}
+                            className="mb-8"
                         >
-                            <span className="block font-header font-black text-white uppercase tracking-tighter leading-[0.93]"
-                                style={{ fontSize: 'clamp(2.8rem, 7vw, 6.5rem)' }}>
-                                {line}
+                            <span className="block font-header font-black text-6xl md:text-7xl leading-none tracking-tighter" style={{ color: slide.accentColor }}>
+                                {slide.stat.value}
+                            </span>
+                            <span className="text-white/60 font-mono text-[10px] uppercase tracking-[0.4em] block mt-2">
+                                {slide.stat.label}
                             </span>
                         </motion.div>
-                    ))}
-                </div>
 
-                {/* Accent phrase */}
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
-                    transition={{ duration: 0.8, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
-                    className="font-body text-xl md:text-2xl font-light italic mb-4 leading-snug"
-                    style={{ color: slide.accentColor }}
-                >
-                    {slide.accent}
-                </motion.p>
+                        {/* Body Text */}
+                        <motion.p
+                            initial={{ opacity: 0, x: isRight ? -20 : 20 }}
+                            animate={isActive ? { opacity: 1, x: 0 } : { opacity: 0, x: isRight ? -20 : 20 }}
+                            transition={{ duration: 0.7, delay: 0.7 }}
+                            className="text-white/70 font-body text-sm md:text-base leading-relaxed mb-10"
+                        >
+                            {slide.body}
+                        </motion.p>
 
-                {/* Body */}
-                <motion.p
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
-                    transition={{ duration: 0.7, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                    className="text-white/80 font-body text-sm md:text-base leading-relaxed mb-8 max-w-md"
-                    style={{ alignSelf: slide.textAlign === 'right' ? 'flex-end' : undefined }}
-                >
-                    {slide.body}
-                </motion.p>
+                        {/* Button */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                            transition={{ duration: 0.6, delay: 0.9 }}
+                        >
+                            <Link
+                                href={slide.cta.href}
+                                className="group inline-flex items-center gap-4 px-8 py-4 rounded-full font-header font-black text-[11px] uppercase tracking-widest transition-all duration-300 hover:scale-105"
+                                style={{
+                                    background: slide.accentColor,
+                                    color: '#011A1E',
+                                    boxShadow: `0 0 40px -10px ${slide.accentColor}40`,
+                                }}
+                            >
+                                {slide.cta.label}
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                        </motion.div>
+                    </div>
+                )}
 
-                {/* CTA */}
-                <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
-                    transition={{ duration: 0.6, delay: 0.85, ease: [0.22, 1, 0.36, 1] }}
-                >
-                    <Link
-                        href={slide.cta.href}
-                        className="group inline-flex items-center gap-3 px-7 py-3.5 rounded-full font-header font-black text-xs uppercase tracking-widest transition-all duration-300 hover:scale-105"
-                        style={{
-                            background: slide.accentColor,
-                            color: '#011A1E',
-                            boxShadow: `0 0 30px -5px ${slide.accentColor}60`,
-                        }}
+                {/* Main Content: Headline and Tag */}
+                <div className={`flex flex-col ${alignClass} max-w-3xl order-1 md:order-2`}>
+                    {/* Tag pill */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+                        transition={{ duration: 0.6, delay: 0.15 }}
+                        className="inline-flex items-center gap-3 mb-8"
                     >
-                        {slide.cta.label}
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                </motion.div>
+                        <div
+                            className="w-2 h-2 rounded-full animate-pulse"
+                            style={{ background: slide.accentColor, boxShadow: `0 0 12px ${slide.accentColor}` }}
+                        />
+                        <span
+                            className="font-header font-black text-xs uppercase tracking-[0.4em]"
+                            style={{ color: slide.accentColor }}
+                        >
+                            {slide.tag}
+                        </span>
+                    </motion.div>
+
+                    {/* Headline */}
+                    <div className="mb-6">
+                        {slide.headline.map((line, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 40 }}
+                                animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+                                transition={{ duration: 0.8, delay: 0.2 + i * 0.1 }}
+                            >
+                                <span className="block font-header font-black text-white uppercase tracking-tighter leading-[0.9]"
+                                    style={{ fontSize: 'clamp(3rem, 8vw, 7.5rem)' }}>
+                                    {line}
+                                </span>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    {/* Accent phrase */}
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                        className="font-body text-2xl md:text-3xl font-light italic leading-tight"
+                        style={{ color: slide.accentColor }}
+                    >
+                        {slide.accent}
+                    </motion.p>
+
+                    {/* Center Mode fallback for body/cta */}
+                    {slide.textAlign === 'center' && (
+                        <div className="mt-12 flex flex-col items-center">
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                animate={isActive ? { opacity: 1 } : { opacity: 0 }}
+                                transition={{ delay: 0.8 }}
+                                className="text-white/80 max-w-lg mb-10"
+                            >
+                                {slide.body}
+                            </motion.p>
+                            <Link
+                                href={slide.cta.href}
+                                className="px-10 py-4 rounded-full font-header font-black text-xs uppercase tracking-widest"
+                                style={{ background: slide.accentColor, color: '#000' }}
+                            >
+                                {slide.cta.label}
+                            </Link>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );
@@ -334,27 +379,29 @@ export default function VideoHeroSlider() {
                 </AnimatePresence>
             </div>
 
-            {/* ── Stat chip (bottom right) ── */}
-            <AnimatePresence mode="wait">
-                <motion.div
-                    key={`stat-${current}`}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -10 }}
-                    transition={{ duration: 0.5, delay: 0.9 }}
-                    className="absolute bottom-24 right-8 md:right-16 z-30 flex flex-col items-end"
-                >
-                    <span
-                        className="font-header font-black text-4xl md:text-5xl leading-none"
-                        style={{ color: slide.accentColor }}
+            {/* Render Stat only in center mode here, elsewhere it's in SlideContent */}
+            {slide.textAlign === 'center' && (
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={`stat-${current}`}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -10 }}
+                        transition={{ duration: 0.5, delay: 0.9 }}
+                        className="absolute bottom-24 right-8 md:right-16 z-30 flex flex-col items-end"
                     >
-                        {slide.stat.value}
-                    </span>
-                    <span className="text-white/85 font-mono text-[11px] uppercase tracking-[0.3em] mt-1">
-                        {slide.stat.label}
-                    </span>
-                </motion.div>
-            </AnimatePresence>
+                        <span
+                            className="font-header font-black text-4xl md:text-5xl leading-none"
+                            style={{ color: slide.accentColor }}
+                        >
+                            {slide.stat.value}
+                        </span>
+                        <span className="text-white/85 font-mono text-[11px] uppercase tracking-[0.3em] mt-1">
+                            {slide.stat.label}
+                        </span>
+                    </motion.div>
+                </AnimatePresence>
+            )}
 
             {/* ── Progress bars (bottom center) ── */}
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2">
