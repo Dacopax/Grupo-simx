@@ -1,0 +1,57 @@
+<!-- Open Graph Image Placeholder for Grupo Simx -->
+<!-- 
+    Esta es una plantilla para crear la imagen OG (Open Graph)
+    Dimensiones recomendadas: 1200x630px
+    
+    Cuando crees la imagen real:
+    1. Usa Canva, Photoshop o Figma
+    2. Dimensiones: 1200x630px
+    3. Incluye: Logo de Grupo Simx + Texto breve
+    4. Colores: Usa la paleta teal/cyan (#00E5FF, #00213F)
+    5. Guarda como: og-image.jpg (calidad 85-90%)
+    6. Coloca en: public/og-image.jpg
+
+    Herramientas recomendadas:
+    - Canva: https://canva.com (plantillas "Facebook Open Graph")
+    - Figma: https://figma.com (gratis)
+    - Photopea: https://photopea.com (Photoshop online gratis)
+-->
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="1200" height="630" fill="#00213F"/>
+    
+    <!-- Gradient overlay -->
+    <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:0.3" />
+            <stop offset="100%" style="stop-color:#00213F;stop-opacity:0" />
+        </linearGradient>
+    </defs>
+    <rect width="1200" height="630" fill="url(#grad1)"/>
+    
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,229,255,0.1)" stroke-width="1"/>
+    </pattern>
+    <rect width="1200" height="630" fill="url(#grid)"/>
+    
+    <!-- Main text -->
+    <text x="50%" y="45%" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+        GRUPO SIMX
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="50%" y="55%" font-family="Arial, sans-serif" font-size="32" fill="#00E5FF" text-anchor="middle">
+        Soluciones Integrales 4.0
+    </text>
+    
+    <!-- Tagline -->
+    <text x="50%" y="65%" font-family="Arial, sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle" opacity="0.8">
+        Automatización • Manufactura • Electrónica • Drones
+    </text>
+    
+    <!-- Website URL -->
+    <text x="50%" y="85%" font-family="Arial, sans-serif" font-size="20" fill="#00E5FF" text-anchor="middle">
+        www.gruposimx.com
+    </text>
+</svg>

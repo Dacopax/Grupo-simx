@@ -1,0 +1,1888 @@
+﻿
+> grupo-simx-site@2.0.0 build
+> next build
+
+  Ôû▓ Next.js 14.2.35
+  - Environments: .env.local, .env
+
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/17) ...
+node.exe : Error: Event handlers cannot be passed 
+to Client Component props.
+En línea: 1 Carácter: 1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Error: 
+    Event ha...omponent props.:String) [], RemoteE  
+  xception
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+   Generating static pages (4/17) 
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+ ÔÜá Sending SIGTERM signal to Next.js build worker 
+due to timeout of 60 seconds. Subsequent errors may 
+be a result of the worker exiting.
+ ÔÜá Restarted static page generation for /contacto 
+because it took more than 60 seconds
+ ÔÜá See more info here https://nextjs.org/docs/mess
+ages/static-page-generation-timeout
+ ÔÜá Restarted static page generation for 
+/_not-found because it took more than 60 seconds
+ ÔÜá Restarted static page generation for /test 
+because it took more than 60 seconds
+ ÔÜá Restarted static page generation for 
+/portafolio because it took more than 60 seconds
+ ÔÜá Restarted static page generation for /privacy 
+because it took more than 60 seconds
+ ÔÜá Restarted static page generation for /nosotros 
+because it took more than 60 seconds
+ ÔÜá Restarted static page generation for /terms 
+because it took more than 60 seconds
+ ÔÜá Restarted static page generation for 
+/portfolio because it took more than 60 seconds
+ ÔÜá Restarted static page generation for / because 
+it took more than 60 seconds
+ ÔÜá Restarted static page generation for 
+/soluciones because it took more than 60 seconds
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at AsyncLocalStorage.run (node:internal/async_lo
+cal_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+50805)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '2827076863'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}
+Error: Event handlers cannot be passed to Client 
+Component props.
+  {onClick: function onClick, className: ..., 
+children: ...}
+            ^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part 
+of this to a Client Component.
+    at e_ (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:140589)
+    at Object.toJSON (C:\Users\dacop\OneDrive - 
+Ridge point\Sitio Grupo Simx\node_modules\next\dist\
+compiled\next-server\app-page.runtime.prod.js:12:135
+777)
+    at stringify (<anonymous>)
+    at eE (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142242)
+    at eT (C:\Users\dacop\OneDrive - Ridge 
+point\Sitio Grupo Simx\node_modules\next\dist\compil
+ed\next-server\app-page.runtime.prod.js:12:142721)
+    at Timeout._onTimeout (C:\Users\dacop\OneDrive 
+- Ridge point\Sitio Grupo Simx\node_modules\next\dis
+t\compiled\next-server\app-page.runtime.prod.js:12:1
+35497)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers 
+(node:internal/timers:541:7) {
+  digest: '257799707'
+}

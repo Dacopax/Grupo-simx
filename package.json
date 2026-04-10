@@ -1,0 +1,44 @@
+{
+    "name": "grupo-simx-site",
+    "version": "2.0.0",
+    "description": "Sitio web corporativo de Grupo Simx (Next.js + Tailwind + Framer Motion)",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@google/genai": "^1.42.0",
+        "@phosphor-icons/react": "^2.1.10",
+        "@react-three/drei": "^10.7.7",
+        "@react-three/fiber": "^9.5.0",
+        "clsx": "^2.1.1",
+        "dompurify": "^3.3.3",
+        "dotenv": "^16.6.1",
+        "framer-motion": "^12.34.4",
+        "lucide-react": "^0.564.0",
+        "mini-svg-data-uri": "^1.4.4",
+        "next": "^14.2.35",
+        "next-cors": "^1.0.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-markdown": "^10.1.0",
+        "sharp": "^0.34.5",
+        "tailwind-merge": "^3.5.0",
+        "three": "^0.182.0"
+    },
+    "keywords": [
+        "nextjs",
+        "tailwindcss",
+        "framer-motion",
+        "corporate-website"
+    ],
+    "author": "GrupoSimx",
+    "license": "MIT",
+    "devDependencies": {
+        "autoprefixer": "^10.4.24",
+        "postcss": "^8.5.6",
+        "tailwindcss": "^3.4.17"
+    }
+}

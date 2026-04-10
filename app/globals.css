@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   DESIGN SYSTEM - GRUPO SIMX
+   Sistema unificado de colores y tipografía
+   ============================================ */
+
+@layer base {
+    :root {
+        /* Font sizes - escala tipográfica */
+        --text-xs: 0.75rem;
+        --text-sm: 0.875rem;
+        --text-base: 1rem;
+        --text-lg: 1.125rem;
+        --text-xl: 1.25rem;
+        --text-2xl: 1.5rem;
+        --text-3xl: 1.875rem;
+        --text-4xl: 2.25rem;
+        --text-5xl: 3rem;
+        --text-6xl: 3.75rem;
+        --text-7xl: 4.5rem;
+        --text-8xl: 6rem;
+
+        /* Label/Tag sizes */
+        --text-label-xs: 0.625rem;
+        --text-label-sm: 0.75rem;
+
+        /* Line heights */
+        --leading-tight: 1.25;
+        --leading-normal: 1.5;
+        --leading-relaxed: 1.625;
+
+        /* Letter spacing */
+        --tracking-tighter: -0.05em;
+        --tracking-tight: -0.025em;
+        --tracking-normal: 0em;
+        --tracking-wide: 0.025em;
+        --tracking-wider: 0.05em;
+        --tracking-widest: 0.1em;
+        --tracking-ultra: 0.2em;
+        --tracking-mega: 0.3em;
+
+        /* Palette Tokens - Matte Turquoise */
+        --simx-turquoise: #2dd4bf;
+        --simx-turquoise-hover: #14b8a6;
+        --simx-bg-deep: #022C32;
+        --simx-bg-matte: #044D57;
+    }
+
+    /* Standard Dark Mode Setup */
+    html {
+        color-scheme: dark;
+        --text-primary: #ffffff;
+        --text-secondary: rgba(255, 255, 255, 0.95);
+        --text-tertiary: rgba(255, 255, 255, 0.80);
+        --text-muted: rgba(255, 255, 255, 0.65);
+        --text-on-accent: #022C32;
+    }
+}
+
+/* ============================================
+   MONOLITHIC MATTE IDENTITIY
+   ============================================ */
+[data-theme='dark'], :root {
+    --simx-bg-primary: #044D57;
+    --simx-bg-secondary: #022C32;
+    --simx-bg-tertiary: #011E22;
+    --simx-text-primary: #ffffff;
+    --simx-text-secondary: #cbd5e1;
+    --simx-text-tertiary: #94a3b8;
+    --simx-border: rgba(45, 212, 191, 0.1);
+    --simx-accent: #2dd4bf;
+    --simx-accent-glow: rgba(45, 212, 191, 0.3);
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    @apply bg-simx-brand-950 text-white font-body antialiased selection:bg-turquoise-400 selection:text-white/20;
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES - ELITE CORPORATE
+   ============================================ */
+
+.section-label {
+    @apply font-header font-black text-xs uppercase tracking-[0.6em] text-turquoise-300;
+}
+
+.section-title {
+    @apply font-header font-black text-5xl md:text-8xl tracking-tighter leading-none uppercase;
+}
+
+.body-text {
+    @apply font-body text-base md:text-xl leading-relaxed font-light italic;
+}
+
+.card-title {
+    @apply font-header font-black text-xl md:text-2xl tracking-widest leading-tight uppercase;
+}
+
+.card-label {
+    @apply font-header font-black text-[10px] uppercase tracking-[0.4em] text-white/70;
+}
+
+.btn-text {
+    @apply font-header font-black text-[11px] uppercase tracking-[0.5em];
+}
+
+.stat-number {
+    @apply font-header font-black text-6xl md:text-8xl leading-none tracking-tighter;
+}
+
+/* ============================================
+   ARCHITECTURAL UTILITIES
+   ============================================ */
+
+.industrial-grid {
+    background-image: 
+        linear-gradient(rgba(45, 212, 191, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45, 212, 191, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.stardust-overlay {
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+    @apply opacity-[0.03] pointer-events-none mix-blend-overlay;
+}
+
+.glass {
+    @apply border border-white/10 bg-white/[0.03] backdrop-blur-3xl;
+}
+
+.title-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-turquoise-400 via-white to-turquoise-400 animate-gradient-x;
+}
+
+/* Hero Background Pattern */
+.hero-matrix {
+    background-image: 
+        radial-gradient(circle at 0% 0%, rgba(45, 212, 191, 0.15) 0, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(2, 44, 50, 0.5) 0, transparent 50%);
+    @apply bg-[#044D57];
+}
+
+/* ============================================
+   ANIMATION UTILITIES
+   ============================================ */
+
+@keyframes gradient-x {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 15s ease infinite;
+}
+
+@keyframes pulse-soft {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+.animate-pulse-soft {
+    animation: pulse-soft 8s ease-in-out infinite;
+}
+
+/* ============================================
+   SCROLLBAR STYLING - TURQUOISE MATTE
+   ============================================ */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-[#022C32];
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-turquoise-400/20 rounded-full hover:bg-turquoise-400/50 transition-colors;
+}
+
+/* Remove all light mode legacy styles */
+[data-theme='light'] {
+    display: none !important;
+}

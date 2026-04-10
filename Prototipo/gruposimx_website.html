@@ -1,0 +1,2128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrupoSIMX | Tecnologías Emergentes · Soluciones Integrales</title>
+  <meta name="description" content="GrupoSIMX — Automatización Industrial, Electrónica, IoT, Redes, Mecatrónica y Manufactura Avanzada para el sector público y privado en México." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,400;0,600;0,800;0,900;1,300&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================================
+       DESIGN SYSTEM — GrupoSIMX
+       Palette extracted from CV:
+         Primary Teal   : #00B4C6  (logo teal)
+         Deep Teal      : #007B8A
+         Dark Navy      : #0A0E1A  (background)
+         Slate Dark     : #111827
+         Red Accent     : #E63946  (used in section titles)
+         Orange Accent  : #F4812C  (used in Mecánica Industrial titles)
+         White          : #F0F4F8
+         Muted          : #8A9BB5
+       Fonts:
+         Display  : Exo 2 (900/800) — industrial, geometric, bold
+         Mono     : Space Mono — technical feel for labels/codes
+         Body     : Inter 300/400 — clean legibility
+    ============================================================ */
+    :root {
+      --teal:       #00B4C6;
+      --teal-deep:  #007B8A;
+      --teal-glow:  rgba(0,180,198,0.15);
+      --red:        #E63946;
+      --orange:     #F4812C;
+      --navy:       #0A0E1A;
+      --slate:      #111827;
+      --slate2:     #1A2235;
+      --white:      #F0F4F8;
+      --muted:      #8A9BB5;
+      --border:     rgba(0,180,198,0.2);
+      --font-display: 'Exo 2', sans-serif;
+      --font-mono:    'Space Mono', monospace;
+      --font-body:    'Inter', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--navy); }
+    ::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 2px; }
+
+    /* ============================================================
+       UTILITY
+    ============================================================ */
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--teal);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    .teal { color: var(--teal); }
+    .red  { color: var(--red);  }
+    .orange { color: var(--orange); }
+    .muted { color: var(--muted); }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.9rem 2rem;
+      background: var(--teal);
+      color: var(--navy);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn-primary:hover { background: #00d4e8; transform: translateY(-2px); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.9rem 2rem;
+      background: transparent;
+      color: var(--teal);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 1px solid var(--teal);
+      cursor: pointer;
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn-ghost:hover { background: var(--teal-glow); }
+
+    /* ============================================================
+       GRID NOISE BACKGROUND TEXTURE
+    ============================================================ */
+    .grid-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(0,180,198,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,180,198,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* ============================================================
+       NAVBAR
+    ============================================================ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 1.2rem 0;
+      transition: background 0.4s, padding 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(10,14,26,0.95);
+      backdrop-filter: blur(12px);
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, var(--teal), var(--teal-deep));
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 900; color: white;
+      font-family: var(--font-display);
+    }
+    .nav-logo-text {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.3rem;
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+    .nav-logo-text span { color: var(--teal); }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: var(--teal);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta { margin-left: 1rem; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--white);
+      transition: all 0.3s;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 100px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    /* Animated gradient mesh */
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      width: 800px; height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,180,198,0.12) 0%, transparent 70%);
+      top: -200px; right: -200px;
+      animation: pulse-glow 6s ease-in-out infinite alternate;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(230,57,70,0.06) 0%, transparent 70%);
+      bottom: 100px; left: -100px;
+      animation: pulse-glow 8s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes pulse-glow {
+      from { transform: scale(1) translate(0,0); opacity: 0.7; }
+      to   { transform: scale(1.2) translate(20px,-20px); opacity: 1; }
+    }
+
+    /* Circuit lines decoration */
+    .circuit-lines {
+      position: absolute;
+      right: 0; top: 0;
+      width: 50%;
+      height: 100%;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .hero-eyebrow-line {
+      width: 40px; height: 1px;
+      background: var(--teal);
+    }
+    .hero-eyebrow-text {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--teal);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.5rem;
+    }
+    .hero-title .line-accent { color: var(--teal); }
+    .hero-title .line-muted {
+      font-weight: 200;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.6em;
+      display: block;
+      letter-spacing: 0;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .stat-item {}
+    .stat-num {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 2.5rem;
+      color: var(--teal);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .stat-num span { color: var(--red); }
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+    }
+
+    /* Floating tech cards */
+    .hero-visual {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      display: none;
+    }
+    @media (min-width: 1100px) { .hero-visual { display: block; } }
+
+    .tech-node {
+      position: absolute;
+      background: var(--slate2);
+      border: 1px solid var(--border);
+      padding: 1rem 1.2rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--teal);
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+      animation: float 4s ease-in-out infinite;
+    }
+    .tech-node:nth-child(1) { top: -60px; left: 0;   animation-delay: 0s; }
+    .tech-node:nth-child(2) { top: 80px;  left: 120px; animation-delay: 0.8s; }
+    .tech-node:nth-child(3) { top: 200px; left: -40px; animation-delay: 1.6s; }
+    .tech-node:nth-child(4) { top: 300px; left: 100px; animation-delay: 0.4s; }
+    .tech-node:nth-child(5) { top: 380px; left: -20px; animation-delay: 1.2s; }
+
+    .tech-node-dot {
+      display: inline-block;
+      width: 6px; height: 6px;
+      background: var(--teal);
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      animation: blink 2s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-8px); }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.2; }
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .scroll-indicator span {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, var(--teal), transparent);
+      animation: scroll-drop 2s ease-in-out infinite;
+    }
+    @keyframes scroll-drop {
+      0%   { opacity: 0; transform: scaleY(0); transform-origin: top; }
+      50%  { opacity: 1; }
+      100% { opacity: 0; transform: scaleY(1); transform-origin: bottom; }
+    }
+
+    /* ============================================================
+       SECTION BASE
+    ============================================================ */
+    section { position: relative; z-index: 1; }
+    .section-pad { padding: 6rem 0; }
+
+    .section-header {
+      margin-bottom: 4rem;
+    }
+    .section-header.center { text-align: center; }
+
+    /* ============================================================
+       ABOUT — QUIÉNES SOMOS
+    ============================================================ */
+    #about {
+      background: var(--slate);
+      border-top: 1px solid var(--border);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+    .about-text p {
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    .about-text p strong { color: var(--white); font-weight: 500; }
+
+    .mvv-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .mvv-card {
+      background: var(--slate2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--teal);
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .mvv-card:hover { transform: translateX(6px); }
+    .mvv-card-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--teal);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .mvv-card h3 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .mvv-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+
+    .values-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .value-chip {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--teal);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--teal-glow);
+    }
+
+    /* ============================================================
+       SERVICES
+    ============================================================ */
+    #services {
+      background: var(--navy);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5px;
+      background: var(--border);
+    }
+    .service-card {
+      background: var(--navy);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: background 0.4s;
+      group: true;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--teal-glow), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-card:hover { background: var(--slate2); }
+
+    .service-number {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--border);
+      letter-spacing: 0.2em;
+      margin-bottom: 1.5rem;
+    }
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1.2rem;
+      display: block;
+      filter: grayscale(0.3);
+      transition: transform 0.3s;
+    }
+    .service-card:hover .service-icon { transform: scale(1.15) rotate(-5deg); }
+
+    .service-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.3rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .service-desc {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .service-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .service-items li {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .service-items li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+    }
+    .service-accent-line {
+      position: absolute;
+      bottom: 0; left: 0;
+      height: 2px;
+      width: 0;
+      background: var(--teal);
+      transition: width 0.5s;
+    }
+    .service-card:hover .service-accent-line { width: 100%; }
+
+    /* ============================================================
+       SPECIALTIES / AREAS — Diagonal layout
+    ============================================================ */
+    #specialties {
+      background: var(--slate);
+      overflow: hidden;
+    }
+    .spec-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      min-height: 500px;
+    }
+    @media (max-width: 900px) { .spec-wrapper { grid-template-columns: 1fr; } }
+
+    .spec-left {
+      background: linear-gradient(135deg, var(--teal-deep), #004f58);
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 900px) { .spec-left { clip-path: none; } }
+
+    .spec-left .section-title { color: white; }
+    .spec-left p { color: rgba(255,255,255,0.75); margin-top: 1rem; font-size: 1rem; line-height: 1.7; }
+
+    .spec-right {
+      background: var(--slate2);
+      padding: 4rem 4rem 4rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-content: center;
+    }
+    @media (max-width: 1100px) { .spec-right { grid-template-columns: 1fr; } }
+
+    .spec-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .spec-bullet {
+      width: 2px;
+      min-height: 60px;
+      background: var(--teal);
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+    .spec-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--teal);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .spec-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+    .spec-sub { color: var(--muted); font-size: 0.82rem; line-height: 1.5; }
+
+    /* ============================================================
+       PROJECTS / PORTFOLIO
+    ============================================================ */
+    #projects { background: var(--navy); }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--slate2);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,180,198,0.12);
+    }
+
+    .project-header {
+      padding: 2rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .project-icon-box {
+      width: 48px; height: 48px;
+      background: var(--teal-glow);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .project-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.05rem;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+    .project-client {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--teal);
+      letter-spacing: 0.1em;
+      margin-top: 0.25rem;
+    }
+
+    .project-body { padding: 1.5rem 2rem; }
+    .project-scope {
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+    .project-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .project-tag {
+      padding: 0.2rem 0.75rem;
+      background: var(--teal-glow);
+      border: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--teal);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-benefits {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 2rem 1.5rem;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .benefit {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--orange);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .benefit::before { content: '★ '; }
+
+    /* ============================================================
+       BRANDS / CLIENTS
+    ============================================================ */
+    #brands {
+      background: var(--slate);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .brands-section-title {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      margin-bottom: 4rem;
+    }
+    .brand-item {
+      background: var(--slate);
+      padding: 2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--muted);
+      transition: color 0.3s, background 0.3s;
+      text-align: center;
+    }
+    .brand-item:hover { color: var(--teal); background: var(--slate2); }
+
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1px;
+      background: var(--border);
+    }
+    .client-item {
+      background: var(--navy);
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-align: center;
+      transition: color 0.3s, background 0.3s;
+      line-height: 1.4;
+    }
+    .client-item:hover { color: var(--white); background: var(--slate2); }
+
+    /* ============================================================
+       WHY US
+    ============================================================ */
+    #why {
+      background: var(--navy);
+      overflow: hidden;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 6rem;
+      align-items: center;
+    }
+    @media (max-width: 900px) { .why-grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+    .why-features {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .why-feature {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+    .why-feature-icon {
+      width: 48px; height: 48px;
+      background: var(--teal-glow);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .why-feature-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+    .why-feature-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
+
+    /* Big number block */
+    .big-numbers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--border);
+    }
+    .big-num-block {
+      background: var(--slate2);
+      padding: 3rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .big-num-block::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--teal), transparent);
+    }
+    .big-num {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 3.5rem;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+    .big-num sup { font-size: 1.5rem; color: var(--red); }
+    .big-num-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ============================================================
+       CTA BANNER
+    ============================================================ */
+    #cta {
+      background: linear-gradient(135deg, var(--teal-deep) 0%, #003f47 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .cta-inner .section-title { color: white; }
+    .cta-inner p { color: rgba(255,255,255,0.7); margin: 1.5rem 0 2.5rem; font-size: 1.1rem; line-height: 1.7; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.9rem 2rem;
+      background: white;
+      color: var(--teal-deep);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+      transition: opacity 0.3s;
+    }
+    .btn-white:hover { opacity: 0.9; }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    #contact { background: var(--slate); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .contact-detail {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .contact-detail-icon {
+      width: 40px; height: 40px;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      color: var(--teal);
+    }
+    .contact-detail-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+    .contact-detail-value {
+      font-size: 0.9rem;
+      color: var(--white);
+      line-height: 1.5;
+    }
+    .contact-detail-value a { color: var(--teal); text-decoration: none; }
+    .contact-detail-value a:hover { text-decoration: underline; }
+
+    .socials {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+    .social-chip {
+      padding: 0.4rem 0.9rem;
+      border: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .social-chip:hover { color: var(--teal); border-color: var(--teal); }
+
+    /* Contact Form */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+    .form-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .form-input, .form-textarea, .form-select {
+      background: var(--slate2);
+      border: 1px solid var(--border);
+      color: var(--white);
+      padding: 0.85rem 1rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.3s;
+      width: 100%;
+    }
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus { border-color: var(--teal); }
+    .form-textarea { resize: vertical; min-height: 120px; }
+    .form-select { appearance: none; cursor: pointer; }
+    .form-select option { background: var(--slate2); }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid var(--border);
+      padding: 3rem 0 2rem;
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .footer-logo-block {}
+    .footer-logo-text {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.5rem;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .footer-logo-text span { color: var(--teal); }
+    .footer-tagline {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+    }
+    .footer-links-block h4 {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--teal);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--teal); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-copy {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+    .footer-copy span { color: var(--teal); }
+
+    /* ============================================================
+       MOBILE NAV
+    ============================================================ */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: var(--navy);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        z-index: 999;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1.1rem; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; z-index: 1001; }
+    }
+
+    /* ============================================================
+       ANIMATIONS — Intersection Observer triggered
+    ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ============================================================
+       TICKER MARQUEE
+    ============================================================ */
+    .ticker-wrap {
+      background: var(--teal);
+      overflow: hidden;
+      padding: 0.6rem 0;
+    }
+    .ticker-inner {
+      display: flex;
+      gap: 0;
+      white-space: nowrap;
+      animation: ticker 30s linear infinite;
+    }
+    .ticker-item {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--navy);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0 2rem;
+    }
+    .ticker-sep {
+      color: rgba(10,14,26,0.4);
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Grid texture -->
+<div class="grid-bg"></div>
+
+<!-- ════════════════════════════════════
+     NAVBAR
+════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-icon">G</div>
+      <span class="nav-logo-text">Grupo<span>SIMX</span></span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Nosotros</a></li>
+      <li><a href="#services">Servicios</a></li>
+      <li><a href="#specialties">Especialidades</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#brands">Clientes</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+
+    <a href="#contact" class="btn-primary nav-cta">Cotizar Proyecto</a>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════
+     HERO
+════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+
+  <!-- Decorative circuit SVG -->
+  <svg class="circuit-lines" viewBox="0 0 600 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="100" y1="0" x2="100" y2="800" stroke="#00B4C6" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="800" stroke="#00B4C6" stroke-width="1"/>
+    <line x1="0" y1="200" x2="600" y2="200" stroke="#00B4C6" stroke-width="1"/>
+    <line x1="0" y1="400" x2="600" y2="400" stroke="#00B4C6" stroke-width="1"/>
+    <line x1="0" y1="600" x2="600" y2="600" stroke="#00B4C6" stroke-width="1"/>
+    <circle cx="100" cy="200" r="6" fill="#00B4C6"/>
+    <circle cx="200" cy="400" r="6" fill="#00B4C6"/>
+    <circle cx="100" cy="600" r="6" fill="#00B4C6"/>
+    <circle cx="200" cy="200" r="4" fill="#E63946"/>
+    <rect x="80" y="380" width="40" height="40" stroke="#00B4C6" stroke-width="1" fill="none"/>
+    <rect x="180" y="580" width="40" height="40" stroke="#00B4C6" stroke-width="1" fill="none"/>
+    <line x1="100" y1="200" x2="200" y2="200" stroke="#00B4C6" stroke-width="1" stroke-dasharray="4 4"/>
+    <line x1="100" y1="400" x2="200" y2="400" stroke="#00B4C6" stroke-width="1" stroke-dasharray="4 4"/>
+    <path d="M300 100 L400 100 L400 300 L500 300" stroke="#00B4C6" stroke-width="1" stroke-dasharray="6 3"/>
+    <path d="M350 500 L450 500 L450 700" stroke="#00B4C6" stroke-width="1" stroke-dasharray="6 3"/>
+    <circle cx="400" cy="100" r="5" fill="#00B4C6"/>
+    <circle cx="450" cy="700" r="5" fill="#00B4C6"/>
+  </svg>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span class="hero-eyebrow-text">Tecnologías Emergentes · Huimanguillo, Tabasco, MX</span>
+      </div>
+
+      <h1 class="hero-title">
+        Soluciones<br/>
+        <span class="line-accent">Industriales</span><br/>
+        <span class="line-muted">del futuro, hoy.</span>
+      </h1>
+
+      <p class="hero-desc">
+        Automatización, electrónica, IoT, redes y manufactura avanzada para el sector
+        industrial y de petróleo. Diseño a la medida, mano de obra calificada, resultados comprobados.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#services" class="btn-primary">Ver Servicios ›</a>
+        <a href="#projects" class="btn-ghost">Portafolio</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">7<span>+</span></div>
+          <div class="stat-label">Áreas de<br/>Especialidad</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">6<span>+</span></div>
+          <div class="stat-label">Proyectos<br/>Industriales</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">10<span>+</span></div>
+          <div class="stat-label">Marcas<br/>Líderes</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">360<span>°</span></div>
+          <div class="stat-label">Servicio<br/>Integral</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating tech nodes (desktop) -->
+  <div class="hero-visual">
+    <div class="tech-node"><span class="tech-node-dot"></span>PLC · Siemens S7</div>
+    <div class="tech-node"><span class="tech-node-dot"></span>CNC · Torno / Fresadora</div>
+    <div class="tech-node"><span class="tech-node-dot"></span>IoT · MQTT / RS485</div>
+    <div class="tech-node"><span class="tech-node-dot"></span>Drone · Fotogrametría</div>
+    <div class="tech-node"><span class="tech-node-dot"></span>Fibra Óptica · PtP/PtMP</div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span class="ticker-item">Automatización Industrial</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">PLC · HMI · SCADA</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">Electrónica Industrial</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">Manufactura CNC · Impresión 3D</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">Redes · Fibra Óptica · WiFi</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">Drones · Fotogrametría</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">Videovigilancia · Control de Acceso</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">Mecánica Industrial</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item">Automatización Industrial</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">PLC · HMI · SCADA</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">Electrónica Industrial</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">Manufactura CNC · Impresión 3D</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">Redes · Fibra Óptica · WiFi</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">Drones · Fotogrametría</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">Videovigilancia · Control de Acceso</span>
+    <span class="ticker-item ticker-sep">·</span>
+    <span class="ticker-item">Mecánica Industrial</span>
+    <span class="ticker-item ticker-sep">·</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     ABOUT
+════════════════════════════════════ -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="tag">// QUIÉNES SOMOS</span>
+        <h2 class="section-title" style="margin-bottom:1.5rem;">
+          Ingeniería<br/><span class="teal">sin límites</span>
+        </h2>
+        <p>
+          <strong>Grupo SIMX</strong> es una empresa mexicana dedicada a la implementación de
+          soluciones integrales mediante diseño, innovación y fabricación para el sector público y privado.
+        </p>
+        <p>
+          Nos especializamos en la venta de materiales y herramientas de los fabricantes de mayor
+          prestigio en el ramo industrial, complementado con <strong>soluciones de ingeniería</strong> desarrolladas
+          por un equipo multidisciplinario altamente capacitado.
+        </p>
+        <p>
+          Nuestra fortaleza está en combinar el mundo físico —mecánica, electricidad, electrónica—
+          con el mundo digital: software embebido, redes, IoT y desarrollo de aplicaciones a la medida.
+        </p>
+        <div class="values-row">
+          <span class="value-chip">Honestidad</span>
+          <span class="value-chip">Claridad</span>
+          <span class="value-chip">Responsabilidad</span>
+          <span class="value-chip">Confianza</span>
+        </div>
+      </div>
+
+      <div class="mvv-cards reveal reveal-delay-2">
+        <div class="mvv-card">
+          <div class="mvv-card-label">// 01 · MISIÓN</div>
+          <h3>Solución Integral</h3>
+          <p>Proveer una gama de servicios para la solución integral de las necesidades de nuestros clientes mediante un equipo multidisciplinario preparado que logre cumplir con las metas planteadas.</p>
+        </div>
+        <div class="mvv-card">
+          <div class="mvv-card-label">// 02 · VISIÓN</div>
+          <h3>Referente Regional</h3>
+          <p>Ser el principal referente en el desarrollo de proyectos que brinden soluciones innovadoras en nuestra región, expandiendo nuestra huella tecnológica en el sureste de México.</p>
+        </div>
+        <div class="mvv-card" style="border-left-color: var(--orange);">
+          <div class="mvv-card-label" style="color: var(--orange);">// 03 · ENFOQUE</div>
+          <h3>Industrial & Petróleo</h3>
+          <p>Mano de obra calificada con experiencia comprobada en proyectos de alta complejidad para el sector industrial, público, educativo y de exploración petrolera.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SERVICES
+════════════════════════════════════ -->
+<section id="services" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag">// SERVICIOS</span>
+      <h2 class="section-title">Lo que<br/><span class="teal">hacemos</span></h2>
+      <p style="color:var(--muted); margin-top:1rem; max-width:520px; font-size:1rem;">
+        Siete áreas de especialidad que cubren el ciclo completo de cualquier proyecto industrial o tecnológico.
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="services-grid reveal">
+
+      <!-- 1 -->
+      <div class="service-card">
+        <div class="service-number">// 01</div>
+        <span class="service-icon">⚙️</span>
+        <h3 class="service-name">Automatización<br/><span class="teal">& Control</span></h3>
+        <p class="service-desc">Implementación de soluciones con PLC para procesos industriales de cualquier complejidad. Autómatas, relevadores programables y microcontroladores.</p>
+        <ul class="service-items">
+          <li>Implementación PLC (Siemens, Rockwell, Schneider)</li>
+          <li>Variadores de frecuencia (bombeo, CNC, ascensores)</li>
+          <li>Desarrollo de HMI en lenguaje G</li>
+          <li>SCADA y monitoreo remoto</li>
+        </ul>
+        <div class="service-accent-line"></div>
+      </div>
+
+      <!-- 2 -->
+      <div class="service-card">
+        <div class="service-number">// 02</div>
+        <span class="service-icon">🏭</span>
+        <h3 class="service-name">Manufactura<br/><span class="teal">Avanzada</span></h3>
+        <p class="service-desc">Fabricación de piezas en torno CNC, fresadora CNC e impresora 3D. Servicio integral adaptado a las necesidades del proyecto.</p>
+        <ul class="service-items">
+          <li>Torno y fresadora CNC</li>
+          <li>Impresión 3D (FDM y resina)</li>
+          <li>Instalación y calibración de sistemas CNC</li>
+          <li>Diseño CAD/CAM</li>
+        </ul>
+        <div class="service-accent-line"></div>
+      </div>
+
+      <!-- 3 -->
+      <div class="service-card">
+        <div class="service-number">// 03</div>
+        <span class="service-icon">⚡</span>
+        <h3 class="service-name">Electricidad<br/><span class="red">Industrial</span></h3>
+        <p class="service-desc">Suministro e instalación de dispositivos eléctricos industriales. Proyectos diseñados a la medida para instalaciones industriales y residenciales.</p>
+        <ul class="service-items">
+          <li>Tableros de control y fuerza</li>
+          <li>Diseño de planos eléctricos (normados)</li>
+          <li>Cableado estructurado y canalización</li>
+          <li>Actuadores, sensores y motores industriales</li>
+        </ul>
+        <div class="service-accent-line" style="background:var(--red);"></div>
+      </div>
+
+      <!-- 4 -->
+      <div class="service-card">
+        <div class="service-number">// 04</div>
+        <span class="service-icon">🔌</span>
+        <h3 class="service-name">Electrónica<br/><span class="teal">Industrial</span></h3>
+        <p class="service-desc">Fabricación de sistemas embebidos y software para el aprendizaje de tendencias tecnológicas, así como sistemas desarrollados a la medida.</p>
+        <ul class="service-items">
+          <li>Diseño de circuitos electrónicos</li>
+          <li>Programación de microcontroladores (PIC, ARM, AVR)</li>
+          <li>Diseño y manufactura de PCB</li>
+          <li>Sistemas embebidos IoT</li>
+        </ul>
+        <div class="service-accent-line"></div>
+      </div>
+
+      <!-- 5 -->
+      <div class="service-card">
+        <div class="service-number">// 05</div>
+        <span class="service-icon">🚁</span>
+        <h3 class="service-name">Drones &<br/><span class="teal">Fotogrametría</span></h3>
+        <p class="service-desc">Captura e interpretación de imagen mediante planes de vuelo con drones. Elaboración de planos y modelos tridimensionales de alta precisión.</p>
+        <ul class="service-items">
+          <li>Software de planificación de vuelo</li>
+          <li>Fotogrametría aérea (modelos 3D, planos)</li>
+          <li>Mantenimiento preventivo y correctivo a drones</li>
+          <li>Venta y refaccionamiento (DJI)</li>
+        </ul>
+        <div class="service-accent-line"></div>
+      </div>
+
+      <!-- 6 -->
+      <div class="service-card">
+        <div class="service-number">// 06</div>
+        <span class="service-icon">📡</span>
+        <h3 class="service-name">Redes &<br/><span class="teal">Telecomunicaciones</span></h3>
+        <p class="service-desc">Proveedores de marcas líderes (HP, Cisco, Ubiquiti, Fortinet, Microsoft). Soluciones de hardware, software y desarrollo a la medida.</p>
+        <ul class="service-items">
+          <li>UPS y respaldo de energía</li>
+          <li>Enlaces PtP y PtMP (Ubiquiti)</li>
+          <li>Fusión de fibra óptica para redes</li>
+          <li>Desarrollo web y aplicaciones móviles</li>
+        </ul>
+        <div class="service-accent-line"></div>
+      </div>
+
+      <!-- 7 -->
+      <div class="service-card">
+        <div class="service-number">// 07</div>
+        <span class="service-icon">📹</span>
+        <h3 class="service-name">Seguridad &<br/><span class="teal">Videovigilancia</span></h3>
+        <p class="service-desc">Experiencia en la ejecución de proyectos de seguridad electrónica y soluciones integrales para la protección de empresas y ciudadanos.</p>
+        <ul class="service-items">
+          <li>Suministro e instalación de cámaras</li>
+          <li>Semáforos inteligentes</li>
+          <li>Control de acceso empresarial y residencial</li>
+          <li>Monitoreo remoto 24/7</li>
+        </ul>
+        <div class="service-accent-line"></div>
+      </div>
+
+      <!-- 8 -->
+      <div class="service-card">
+        <div class="service-number">// 08</div>
+        <span class="service-icon">🔩</span>
+        <h3 class="service-name">Mecánica<br/><span class="orange">Industrial</span></h3>
+        <p class="service-desc">Suministro de rodamientos de marcas líderes (SKF, FAG, NSK), diseño de partes especiales y diagnóstico de motores Diesel por escaneo.</p>
+        <ul class="service-items">
+          <li>Rodamientos industriales premium</li>
+          <li>Diseño en 3D (piezas especiales)</li>
+          <li>Escáneres para motores a Diesel</li>
+          <li>Diseño mecánico a la medida</li>
+        </ul>
+        <div class="service-accent-line" style="background:var(--orange);"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SPECIALTIES
+════════════════════════════════════ -->
+<section id="specialties">
+  <div class="spec-wrapper">
+    <div class="spec-left reveal">
+      <span class="tag" style="color:rgba(255,255,255,0.6);">// ÁREAS DE ESPECIALIDAD</span>
+      <h2 class="section-title" style="color:white;">Dominio<br/>técnico<br/>profundo</h2>
+      <p>Cada área de GrupoSIMX está respaldada por equipos con experiencia de campo, certificaciones y proyectos entregados en sectores exigentes como petróleo, educación e infraestructura pública.</p>
+    </div>
+    <div class="spec-right reveal reveal-delay-2">
+      <div class="spec-item">
+        <div class="spec-bullet"></div>
+        <div>
+          <div class="spec-label">// 01</div>
+          <div class="spec-name">IoT & Sistemas Embebidos</div>
+          <div class="spec-sub">Microcontroladores PIC/ARM, protocolos MQTT, RS485, I2C, SPI para monitoreo industrial en tiempo real.</div>
+        </div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-bullet"></div>
+        <div>
+          <div class="spec-label">// 02</div>
+          <div class="spec-name">Instrumentación Industrial</div>
+          <div class="spec-sub">Diseño y calibración de sensores, adquisición de datos, integración con sistemas SCADA.</div>
+        </div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-bullet"></div>
+        <div>
+          <div class="spec-label">// 03</div>
+          <div class="spec-name">Diseño Electrónico PCB</div>
+          <div class="spec-sub">Diseño esquemático, layout y manufactura de circuitos impresos para aplicaciones industriales específicas.</div>
+        </div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-bullet"></div>
+        <div>
+          <div class="spec-label">// 04</div>
+          <div class="spec-name">Exploración & Sondas</div>
+          <div class="spec-sub">Fabricación de sondas para pozos: diseño electrónico/mecánico, sistemas embebidos e interfaz de usuario.</div>
+        </div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-bullet"></div>
+        <div>
+          <div class="spec-label">// 05</div>
+          <div class="spec-name">Desarrollo de Software</div>
+          <div class="spec-sub">Aplicaciones web, móviles y de escritorio. Sitios corporativos y sistemas de monitoreo a medida.</div>
+        </div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-bullet"></div>
+        <div>
+          <div class="spec-label">// 06</div>
+          <div class="spec-name">Seguridad Electrónica</div>
+          <div class="spec-sub">Diseño e implementación de sistemas de seguridad para infraestructura pública y empresas privadas.</div>
+        </div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-bullet"></div>
+        <div>
+          <div class="spec-label">// 07</div>
+          <div class="spec-name">Mantenimiento Industrial</div>
+          <div class="spec-sub">Correctivo y preventivo a equipos CNC, centrífugas, tableros, variadores y maquinaria de producción.</div>
+        </div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-bullet"></div>
+        <div>
+          <div class="spec-label">// 08</div>
+          <div class="spec-name">Infraestructura IT</div>
+          <div class="spec-sub">Redes empresariales, ciberseguridad (Fortinet), telecomunicaciones punto a punto y servidores.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     PROJECTS
+════════════════════════════════════ -->
+<section id="projects" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag">// PORTAFOLIO</span>
+      <h2 class="section-title">Proyectos<br/><span class="teal">ejecutados</span></h2>
+      <p style="color:var(--muted); margin-top:1rem; max-width:520px;">Soluciones entregadas en sectores de alta demanda técnica.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- P1 -->
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon-box">⚡</div>
+          <div>
+            <div class="project-title">Automatización de Sistema Hidroneumático para Aeropuerto</div>
+            <div class="project-client">ASUR · Aeropuertos del Sureste</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p class="project-scope">Diseño del diagrama eléctrico del tablero de control y fuerza, programación del controlador PLC y puesta en marcha de las bombas hidroneumáticas en instalación aeroportuaria.</p>
+          <div class="project-tags">
+            <span class="project-tag">PLC</span>
+            <span class="project-tag">Tablero Eléctrico</span>
+            <span class="project-tag">Bombeo Industrial</span>
+            <span class="project-tag">Aeropuerto</span>
+          </div>
+        </div>
+        <div class="project-benefits">
+          <span class="benefit">Rendimiento</span>
+          <span class="benefit">Reducción de Costos</span>
+          <span class="benefit">Diseño a Medida</span>
+        </div>
+      </div>
+
+      <!-- P2 -->
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-header">
+          <div class="project-icon-box">🏭</div>
+          <div>
+            <div class="project-title">Mantenimiento Correctivo a Torno y Fresadora CNC</div>
+            <div class="project-client">ITSC · Instituto Tecnológico Superior de Comalcalco</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p class="project-scope">Mantenimiento mecánico, neumático e hidráulico completo. Instalación del sistema operativo CNC y calibración de sensores para reactivación total del equipo.</p>
+          <div class="project-tags">
+            <span class="project-tag">CNC</span>
+            <span class="project-tag">Fresadora</span>
+            <span class="project-tag">Torno</span>
+            <span class="project-tag">Mantenimiento</span>
+          </div>
+        </div>
+        <div class="project-benefits">
+          <span class="benefit">Versatilidad</span>
+          <span class="benefit">Reducción de Costos</span>
+        </div>
+      </div>
+
+      <!-- P3 -->
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-header">
+          <div class="project-icon-box">🔭</div>
+          <div>
+            <div class="project-title">Diseño y Manufactura de Sonda con Geófonos</div>
+            <div class="project-client">Aurora Geofísica · Estudios Geológicos</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p class="project-scope">Diseño y manufactura de piezas mediante impresión 3D, ensamble mecánico de precisión y programación del sistema de control embebido con comunicación RS485 para exploración geológica.</p>
+          <div class="project-tags">
+            <span class="project-tag">Embebido</span>
+            <span class="project-tag">Impresión 3D</span>
+            <span class="project-tag">Geófonos</span>
+            <span class="project-tag">PCB Custom</span>
+          </div>
+        </div>
+        <div class="project-benefits">
+          <span class="benefit">Rendimiento</span>
+          <span class="benefit">Diseño a Medida</span>
+        </div>
+      </div>
+
+      <!-- P4 -->
+      <div class="project-card reveal">
+        <div class="project-header">
+          <div class="project-icon-box">🔴</div>
+          <div>
+            <div class="project-title">Mant. Correctivo a Centrífuga Decantadora Alfa Laval</div>
+            <div class="project-client">Sector Industrial · Campo</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p class="project-scope">Cambio de rodamientos, revisión de aislamiento en motores, reacondicionamiento eléctrico completo del tablero de control y fuerza. Instalación y puesta en marcha en campo.</p>
+          <div class="project-tags">
+            <span class="project-tag">Rodamientos SKF</span>
+            <span class="project-tag">Tablero Control</span>
+            <span class="project-tag">Alfa Laval</span>
+          </div>
+        </div>
+        <div class="project-benefits">
+          <span class="benefit">Versatilidad</span>
+          <span class="benefit">Reducción de Costos</span>
+        </div>
+      </div>
+
+      <!-- P5 -->
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-header">
+          <div class="project-icon-box">🚿</div>
+          <div>
+            <div class="project-title">Fabricación de Sonda para Exploración de Pozos</div>
+            <div class="project-client">Sector Petróleo · Aurora Geofísica</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p class="project-scope">Diseño electrónico y mecánico completo, programación del sistema embebido, impresión 3D en resina para el servomecanismo e implementación de la interfaz de usuario portable.</p>
+          <div class="project-tags">
+            <span class="project-tag">PCB GrupoSIMX</span>
+            <span class="project-tag">3D Resina</span>
+            <span class="project-tag">Embebido</span>
+            <span class="project-tag">HMI</span>
+          </div>
+        </div>
+        <div class="project-benefits">
+          <span class="benefit">Rendimiento</span>
+          <span class="benefit">Versatilidad</span>
+          <span class="benefit">Diseño a Medida</span>
+        </div>
+      </div>
+
+      <!-- P6 -->
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-header">
+          <div class="project-icon-box">📊</div>
+          <div>
+            <div class="project-title">Sistema de Adquisición de Datos Gráficos para SCR de PCR</div>
+            <div class="project-client">Sector Industrial · Control Eléctrico</div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p class="project-scope">Programación de interfaz gráfica para visualización en tiempo real de señales (diente de sierra) de SCR, implementación del hardware de adquisición y protocolos de comunicación serial.</p>
+          <div class="project-tags">
+            <span class="project-tag">LabVIEW</span>
+            <span class="project-tag">DAQ</span>
+            <span class="project-tag">SCR</span>
+            <span class="project-tag">Señales</span>
+          </div>
+        </div>
+        <div class="project-benefits">
+          <span class="benefit">Rendimiento</span>
+          <span class="benefit">Diseño a Medida</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     WHY US
+════════════════════════════════════ -->
+<section id="why" class="section-pad">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-features reveal">
+        <span class="tag">// POR QUÉ ELEGIRNOS</span>
+        <h2 class="section-title" style="margin-bottom:2.5rem;">
+          Ingeniería<br/>con <span class="teal">propósito</span>
+        </h2>
+        <div class="why-feature">
+          <div class="why-feature-icon">🎯</div>
+          <div>
+            <div class="why-feature-title">Diseño a la medida</div>
+            <p class="why-feature-desc">Cada proyecto se diseña desde cero para los requerimientos específicos del cliente. No usamos soluciones genéricas.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon">🔧</div>
+          <div>
+            <div class="why-feature-title">Equipo multidisciplinario</div>
+            <p class="why-feature-desc">Ingenieros en automatización, electrónica, mecatrónica, redes e IT trabajando en sinergia en tu proyecto.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon">🏭</div>
+          <div>
+            <div class="why-feature-title">Experiencia comprobada</div>
+            <p class="why-feature-desc">Proyectos ejecutados para aeropuertos, universidades, empresas geofísicas e instituciones industriales del sureste de México.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon">⚡</div>
+          <div>
+            <div class="why-feature-title">Marcas líderes mundiales</div>
+            <p class="why-feature-desc">Distribuidores y proveedores certificados de Siemens, Schneider, Rockwell, FANUC, Cisco, DJI, SKF, Fortinet y más.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="big-numbers reveal reveal-delay-2">
+        <div class="big-num-block">
+          <div class="big-num">360<sup>°</sup></div>
+          <div class="big-num-label">Servicio integral<br/>de principio a fin</div>
+        </div>
+        <div class="big-num-block">
+          <div class="big-num" style="color:var(--red);">7<sup>+</sup></div>
+          <div class="big-num-label">Sectores<br/>atendidos</div>
+        </div>
+        <div class="big-num-block">
+          <div class="big-num" style="color:var(--orange);">10<sup>+</sup></div>
+          <div class="big-num-label">Marcas líderes<br/>distribuidas</div>
+        </div>
+        <div class="big-num-block">
+          <div class="big-num">∞</div>
+          <div class="big-num-label">Compromiso<br/>con el cliente</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     BRANDS & CLIENTS
+════════════════════════════════════ -->
+<section id="brands" class="section-pad">
+  <div class="container">
+
+    <div class="brands-section-title reveal">// Marcas que distribuimos y con las que trabajamos</div>
+
+    <div class="brands-grid reveal">
+      <div class="brand-item">SIEMENS</div>
+      <div class="brand-item">Schneider<br/>Electric</div>
+      <div class="brand-item">Rockwell<br/>Automation</div>
+      <div class="brand-item">FANUC</div>
+      <div class="brand-item">Microchip</div>
+      <div class="brand-item">Ubiquiti<br/>Networks</div>
+      <div class="brand-item">DJI</div>
+      <div class="brand-item">Fortinet</div>
+      <div class="brand-item">HP</div>
+      <div class="brand-item">Cisco</div>
+      <div class="brand-item">Microsoft</div>
+      <div class="brand-item">SKF · FAG<br/>NSK</div>
+    </div>
+
+    <div class="brands-section-title reveal" style="margin-top:4rem;">// Nuestros clientes</div>
+
+    <div class="clients-grid reveal">
+      <div class="client-item">TITSA<br/>Transportes Internacionales Tamaulipecos</div>
+      <div class="client-item">UJAT<br/>Universidad Juárez Autónoma de Tabasco</div>
+      <div class="client-item">PROLADE<br/>Sustainable Palm Oil</div>
+      <div class="client-item">ASUR<br/>Aeropuertos del Sureste</div>
+      <div class="client-item">ITSC<br/>Instituto Tecnológico Superior de Comalcalco</div>
+      <div class="client-item">TECNOTABLA<br/>by Proteak</div>
+      <div class="client-item">Aurora Geofísica<br/>Estudios Geológicos</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     CTA
+════════════════════════════════════ -->
+<section id="cta" class="section-pad">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <span class="tag" style="color:rgba(255,255,255,0.6); justify-content:center; display:flex;">// ¿TIENES UN PROYECTO?</span>
+      <h2 class="section-title">Hablemos de<br/>tu reto técnico</h2>
+      <p>Ya sea automatización compleja, una sonda para pozos, una red empresarial o un sistema embebido personalizado — GrupoSIMX tiene el equipo y la experiencia para hacerlo realidad.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn-white">Solicitar Cotización</a>
+        <a href="tel:9371165300" class="btn-ghost" style="border-color:rgba(255,255,255,0.4); color:white;">📞 937 116 5300</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     CONTACT
+════════════════════════════════════ -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag">// CONTACTO</span>
+      <h2 class="section-title">Escríbenos</h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div>
+            <div class="contact-detail-label">Dirección</div>
+            <div class="contact-detail-value">
+              Calle Framboyanes 21B, Col. Arboledas<br/>
+              Huimanguillo, Tabasco, México. C.P. 86404
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div>
+            <div class="contact-detail-label">Teléfonos</div>
+            <div class="contact-detail-value">
+              <a href="tel:9371165300">937 116 5300</a><br/>
+              <a href="tel:9381846393">938 184 6393</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📱</div>
+          <div>
+            <div class="contact-detail-label">WhatsApp</div>
+            <div class="contact-detail-value">
+              <a href="https://wa.me/529371005459">937 100 5459</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉️</div>
+          <div>
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-value">
+              <a href="mailto:contacto@gruposimx.com">contacto@gruposimx.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🌐</div>
+          <div>
+            <div class="contact-detail-label">Web</div>
+            <div class="contact-detail-value">
+              <a href="https://www.gruposimx.com" target="_blank">www.gruposimx.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="contact-detail-label" style="font-family:var(--font-mono); font-size:0.65rem; color:var(--muted); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.75rem;">Redes Sociales</div>
+          <div class="socials">
+            <a href="#" class="social-chip">LinkedIn</a>
+            <a href="#" class="social-chip">Twitter</a>
+            <a href="#" class="social-chip">Facebook</a>
+          </div>
+        </div>
+
+      </div>
+
+      <form class="contact-form reveal reveal-delay-2" onsubmit="handleForm(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Nombre *</label>
+            <input type="text" class="form-input" placeholder="Tu nombre completo" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Empresa</label>
+            <input type="text" class="form-input" placeholder="Nombre de tu empresa" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Email *</label>
+            <input type="email" class="form-input" placeholder="correo@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Teléfono</label>
+            <input type="tel" class="form-input" placeholder="+52 938 000 0000" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Área de interés</label>
+          <select class="form-select">
+            <option value="">Selecciona un servicio</option>
+            <option>Automatización & Control PLC</option>
+            <option>Manufactura Avanzada CNC / 3D</option>
+            <option>Electricidad Industrial</option>
+            <option>Electrónica Industrial / Embebidos</option>
+            <option>Drones & Fotogrametría</option>
+            <option>Redes & Telecomunicaciones</option>
+            <option>Seguridad & Videovigilancia</option>
+            <option>Mecánica Industrial</option>
+            <option>Desarrollo de Software / Web</option>
+            <option>Otro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Descripción del proyecto *</label>
+          <textarea class="form-textarea" placeholder="Cuéntanos en qué consiste tu proyecto, los retos técnicos, plazos o cualquier detalle relevante..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width:fit-content;">
+          Enviar Solicitud ›
+        </button>
+
+        <div id="form-msg" style="display:none; font-family:var(--font-mono); font-size:0.75rem; color:var(--teal); margin-top:0.5rem; letter-spacing:0.08em;"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     FOOTER
+════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo-block">
+        <div class="footer-logo-text">Grupo<span>SIMX</span></div>
+        <div class="footer-tagline">// TECNOLOGÍAS EMERGENTES · México 2022–</div>
+      </div>
+      <div class="footer-links-block">
+        <h4>// Servicios</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Automatización & Control</a></li>
+          <li><a href="#services">Manufactura Avanzada</a></li>
+          <li><a href="#services">Electricidad Industrial</a></li>
+          <li><a href="#services">Electrónica Industrial</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-block">
+        <h4>// Más servicios</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Drones & Fotogrametría</a></li>
+          <li><a href="#services">Redes & Telecomunicaciones</a></li>
+          <li><a href="#services">Seguridad & Videovigilancia</a></li>
+          <li><a href="#services">Mecánica Industrial</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-block">
+        <h4>// Empresa</h4>
+        <ul class="footer-links">
+          <li><a href="#about">Quiénes somos</a></li>
+          <li><a href="#projects">Portafolio</a></li>
+          <li><a href="#brands">Clientes</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        © 2024 <span>GrupoSIMX</span> · Huimanguillo, Tabasco, México · Todos los derechos reservados
+      </div>
+      <div class="footer-copy">
+        <a href="mailto:contacto@gruposimx.com" style="color:var(--teal); text-decoration:none;">contacto@gruposimx.com</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════
+     JS
+════════════════════════════════════ -->
+<script>
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Form handler
+  function handleForm(e) {
+    e.preventDefault();
+    const msg = document.getElementById('form-msg');
+    msg.style.display = 'block';
+    msg.textContent = '✓ Mensaje enviado. Te contactaremos pronto.';
+    e.target.reset();
+    setTimeout(() => { msg.style.display = 'none'; }, 5000);
+  }
+</script>
+
+</body>
+</html>
