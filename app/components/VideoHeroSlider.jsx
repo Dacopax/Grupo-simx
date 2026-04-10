@@ -157,7 +157,7 @@ function SlideContent({ slide, isActive }) {
                             transition={{ duration: 0.6, delay: 0.8 }}
                             className="mb-8"
                         >
-                            <span className="block font-header font-black text-6xl md:text-7xl leading-none tracking-tighter" style={{ color: slide.accentColor }}>
+                            <span className="block font-header font-black text-5xl md:text-6xl leading-none tracking-tighter" style={{ color: slide.accentColor }}>
                                 {slide.stat.value}
                             </span>
                             <span className="text-white/60 font-mono text-[10px] uppercase tracking-[0.4em] block mt-2">
@@ -228,7 +228,7 @@ function SlideContent({ slide, isActive }) {
                                 transition={{ duration: 0.8, delay: 0.2 + i * 0.1 }}
                             >
                                 <span className="block font-header font-black text-white uppercase tracking-tighter leading-[0.9]"
-                                    style={{ fontSize: 'clamp(3rem, 8vw, 7.5rem)' }}>
+                                    style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)' }}>
                                     {line}
                                 </span>
                             </motion.div>
