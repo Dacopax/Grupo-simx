@@ -403,12 +403,6 @@ export default function VideoHeroSlider() {
                 </AnimatePresence>
             )}
 
-            {/* ── Slide counter ── */}
-            <div className="absolute bottom-8 right-8 md:right-16 z-30">
-                <span className="font-mono text-white/85 text-xs tracking-widest">
-                    {String(current + 1).padStart(2, '0')} / {String(SLIDES.length).padStart(2, '0')}
-                </span>
-            </div>
         </section>
     );
 }
