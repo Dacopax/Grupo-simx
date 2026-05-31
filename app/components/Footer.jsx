@@ -37,7 +37,7 @@ export default function Footer() {
                         {/* Column 1: Brand */}
                         <div className="lg:col-span-4 space-y-10">
                             <Link href="/" className="inline-block group">
-                                <div className="relative h-14 w-48 sm:h-14 sm:w-52 md:h-16 md:w-56">
+                                <div className="relative h-16 w-56 sm:h-16 sm:w-56 md:h-20 md:w-72">
                                     <NextImage
                                         src="/GrupoSimxLogo.png"
                                         alt="Grupo Simx"
