@@ -144,12 +144,12 @@ function SlideContent({ slide, isActive }) {
     }[slide.textAlign];
 
     return (
-        <div className={`relative z-10 container mx-auto px-8 md:px-16 h-full flex items-center pt-32 md:pt-44`}>
-            <div className={`flex flex-col md:flex-row w-full ${containerClass} gap-12 items-center md:items-end`}>
+        <div className={`relative z-10 container mx-auto px-4 md:px-16 h-full flex items-center pt-28 md:pt-44`}>
+            <div className={`flex flex-col md:flex-row w-full ${containerClass} gap-6 md:gap-12 items-center md:items-end`}>
                 
                 {/* Secondary Content: Stats and Button (Opposite side) */}
                 {slide.textAlign !== 'center' && (
-                    <div className={`flex flex-col ${isRight ? 'items-start text-left' : 'items-end text-right'} max-w-sm mb-20 md:mb-0 order-2 md:order-1`}>
+                    <div className={`flex flex-col ${isRight ? 'items-start text-left' : 'items-end text-right'} max-w-sm mb-8 md:mb-0 order-2 md:order-1`}>
                         {/* Stat Block */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
@@ -157,7 +157,7 @@ function SlideContent({ slide, isActive }) {
                             transition={{ duration: 0.6, delay: 0.8 }}
                             className="mb-8"
                         >
-                            <span className="block font-header font-black text-5xl md:text-6xl leading-none tracking-tighter" style={{ color: slide.accentColor }}>
+                            <span className="block font-header font-black text-3xl sm:text-4xl md:text-6xl leading-none tracking-tighter" style={{ color: slide.accentColor }}>
                                 {slide.stat.value}
                             </span>
                             <span className="text-white/60 font-mono text-[10px] uppercase tracking-[0.4em] block mt-2">
@@ -183,7 +183,7 @@ function SlideContent({ slide, isActive }) {
                         >
                             <Link
                                 href={slide.cta.href}
-                                className="group inline-flex items-center gap-4 px-8 py-4 rounded-full font-header font-black text-[11px] uppercase tracking-widest transition-all duration-300 hover:scale-105"
+                                className="group inline-flex items-center gap-3 sm:gap-4 px-5 sm:px-8 py-3 sm:py-4 rounded-full font-header font-black text-[10px] sm:text-[11px] uppercase tracking-widest transition-all duration-300 hover:scale-105"
                                 style={{
                                     background: slide.accentColor,
                                     color: '#011A1E',
@@ -240,7 +240,7 @@ function SlideContent({ slide, isActive }) {
                         initial={{ opacity: 0, y: 20 }}
                         animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
-                        className="font-body text-2xl md:text-3xl font-light italic leading-tight"
+                        className="font-body text-lg sm:text-xl md:text-3xl font-light italic leading-tight"
                         style={{ color: slide.accentColor }}
                     >
                         {slide.accent}
@@ -259,7 +259,7 @@ function SlideContent({ slide, isActive }) {
                             </motion.p>
                             <Link
                                 href={slide.cta.href}
-                                className="px-10 py-4 rounded-full font-header font-black text-xs uppercase tracking-widest"
+                                className="px-6 sm:px-10 py-3 sm:py-4 rounded-full font-header font-black text-[10px] sm:text-xs uppercase tracking-widest"
                                 style={{ background: slide.accentColor, color: '#000' }}
                             >
                                 {slide.cta.label}
@@ -334,7 +334,7 @@ export default function VideoHeroSlider() {
     const slide = SLIDES[current];
 
     return (
-        <section className="relative w-full overflow-hidden bg-black" style={{ height: '100svh', minHeight: 560 }}>
+        <section className="relative w-full overflow-hidden bg-black" style={{ height: '100svh', minHeight: 480 }}>
 
             {/* ── Videos (all preloaded, only current visible) ── */}
             {SLIDES.map((s, i) => (

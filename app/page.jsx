@@ -61,7 +61,7 @@ export default function Home() {
             <WhyUs />
 
             {/* SERVICES SECTION */}
-            <section className="relative py-32 md:py-48 bg-[#044D57] overflow-hidden">
+            <section className="relative py-20 md:py-48 bg-[#044D57] overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
                     style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}
                 />
@@ -76,15 +76,15 @@ export default function Home() {
                         <span className="text-turquoise-400 font-header font-black text-xs uppercase tracking-[0.6em] mb-12 block">
                             // UNIDAD DE ORQUESTACIÓN TÉCNICA
                         </span>
-                        <h2 className="text-white font-header font-black text-5xl md:text-8xl tracking-tighter leading-none mb-8 uppercase">
+                        <h2 className="text-white font-header font-black text-4xl sm:text-5xl md:text-8xl tracking-tighter leading-none mb-8 uppercase">
                             Ingeniería de <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-turquoise-200 to-white animate-gradient-x">Alto Rango</span>
                         </h2>
-                        <p className="text-white font-body text-xl md:text-3xl max-w-4xl mx-auto italic font-light opacity-90">
+                        <p className="text-white font-body text-lg sm:text-xl md:text-3xl max-w-4xl mx-auto italic font-light opacity-90">
                             Desplegamos arquitecturas tecnológicas de precisión quirúrgica para la competitividad industrial global.
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                         {SERVICES_HIGHLIGHT.map((service, i) => (
                             <motion.div
                                 key={service.title}
@@ -92,15 +92,15 @@ export default function Home() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1, duration: 0.8 }}
-                                className="group p-10 rounded-[3rem] bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-turquoise-400/30 transition-all duration-500 backdrop-blur-xl relative overflow-hidden"
+                                className="group p-6 sm:p-8 md:p-10 rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-turquoise-400/30 transition-all duration-500 backdrop-blur-xl relative overflow-hidden"
                             >
                                 <div className="absolute -right-8 -top-8 w-32 h-32 bg-turquoise-400/5 rounded-full blur-3xl group-hover:bg-turquoise-400/10 transition-colors" />
                                 
                                 <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 group-hover:bg-turquoise-500/20 transition-all">
                                     <service.icon className="w-8 h-8 text-turquoise-200" weight="light" />
                                 </div>
-                                <h3 className="text-white font-header font-black text-2xl mb-4 uppercase tracking-tighter group-hover:text-turquoise-200 transition-colors">{service.title}</h3>
-                                <p className="text-white/80 font-body text-lg leading-relaxed mb-10 group-hover:text-white transition-opacity">{service.desc}</p>
+                                <h3 className="text-white font-header font-black text-xl md:text-2xl mb-4 uppercase tracking-tighter group-hover:text-turquoise-200 transition-colors">{service.title}</h3>
+                                <p className="text-white/80 font-body text-sm sm:text-base md:text-lg leading-relaxed mb-10 group-hover:text-white transition-opacity">{service.desc}</p>
                                 <Link 
                                     href={service.href}
                                     className="inline-flex items-center gap-3 text-turquoise-400 font-header font-black text-[10px] uppercase tracking-widest hover:text-white transition-colors group/link"
@@ -118,17 +118,17 @@ export default function Home() {
             <About />
 
             {/* SECTORS SECTION */}
-            <section className="relative py-32 md:py-48 bg-[#262626] overflow-hidden">
+            <section className="relative py-20 md:py-48 bg-[#262626] overflow-hidden">
                 <div className="container mx-auto px-6">
-                    <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-24">
+                    <div className="flex flex-col md:flex-row justify-between items-end gap-8 md:gap-12 mb-16 md:mb-24">
                         <div className="max-w-3xl">
                             <span className="text-turquoise-400 font-header font-black text-xs uppercase tracking-[0.6em] mb-4 block">// ALCANCE OPERATIVO</span>
-                            <h2 className="text-white font-header font-black text-5xl md:text-8xl tracking-tighter leading-none uppercase">
+                            <h2 className="text-white font-header font-black text-4xl sm:text-5xl md:text-8xl tracking-tighter leading-none uppercase">
                                 Sectores que <br /> <span className="text-turquoise-400">atendemos</span>
                             </h2>
                         </div>
                         <div className="max-w-sm">
-                            <p className="text-white/80 font-body text-base leading-relaxed italic mb-8 opacity-90">
+                            <p className="text-white/80 font-body text-sm sm:text-base leading-relaxed italic mb-8 opacity-90">
                                 Nuestra ingeniería se despliega en los sectores más exigentes de la industria nacional — desde aeropuertos y universidades hasta plantas Oil & Gas y zonas industriales.
                             </p>
                             <div className="flex items-center gap-6">
@@ -145,7 +145,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         {SECTORS.map((sector, i) => (
                             <motion.div
                                 key={sector.name}
@@ -153,7 +153,7 @@ export default function Home() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1, duration: 0.8 }}
-                                className="group relative p-12 rounded-[3rem] bg-[#044D57] border border-white/5 hover:bg-[#065f6b] hover:border-turquoise-400/30 transition-all duration-500 overflow-hidden shadow-2xl"
+                                className="group relative p-8 sm:p-10 md:p-12 rounded-[2rem] sm:rounded-[3rem] bg-[#044D57] border border-white/5 hover:bg-[#065f6b] hover:border-turquoise-400/30 transition-all duration-500 overflow-hidden shadow-2xl"
                             >
                                 <div className="flex items-start justify-between mb-12">
                                     <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-turquoise-500/20 group-hover:scale-110 transition-all duration-500">
@@ -161,7 +161,7 @@ export default function Home() {
                                     </div>
                                     <span className="text-white/10 font-header font-black text-3xl transition-opacity group-hover:opacity-20">{sector.id}</span>
                                 </div>
-                                <h3 className="text-white font-header font-black text-3xl mb-8 uppercase tracking-tighter group-hover:text-turquoise-200 transition-colors">{sector.name}</h3>
+                                <h3 className="text-white font-header font-black text-2xl md:text-3xl mb-8 uppercase tracking-tighter group-hover:text-turquoise-200 transition-colors">{sector.name}</h3>
                                 <div className="space-y-4">
                                     {sector.scope.map(item => (
                                         <div key={item} className="flex items-center gap-3">

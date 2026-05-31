@@ -98,7 +98,7 @@ export default function ContactForm({ className = '', compact = false }) {
     };
 
     const inputClasses = (error) => `
-        w-full pl-12 pr-6 py-4 bg-white/[0.03] border rounded-2xl font-body text-base text-white 
+        w-full pl-10 sm:pl-12 pr-4 sm:pr-6 py-3 sm:py-4 bg-white/[0.03] border rounded-xl sm:rounded-2xl font-body text-sm sm:text-base text-white 
         placeholder:text-white/70 focus:outline-none focus:ring-2 transition-all backdrop-blur-md
         ${error 
             ? 'border-red-400/50 focus:border-red-400 focus:ring-red-400/20' 
@@ -158,12 +158,12 @@ export default function ContactForm({ className = '', compact = false }) {
                             </div>
                         )}
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                             {/* Nombre */}
                             <div className="space-y-1">
                                 <label className={labelClasses}>Identidad del Cliente</label>
                                 <div className="relative">
-                                    <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-turquoise-200/30" weight="light" />
+                                    <User className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-turquoise-200/30" weight="light" />
                                     <input
                                         type="text"
                                         name="name"
@@ -180,7 +180,7 @@ export default function ContactForm({ className = '', compact = false }) {
                             <div className="space-y-1">
                                 <label className={labelClasses}>Canal de Enlace (Email)</label>
                                 <div className="relative">
-                                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-turquoise-200/30" weight="light" />
+                                    <Mail className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-turquoise-200/30" weight="light" />
                                     <input
                                         type="email"
                                         name="email"
@@ -194,12 +194,12 @@ export default function ContactForm({ className = '', compact = false }) {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                             {/* Teléfono */}
                             <div className="space-y-1">
                                 <label className={labelClasses}>Línea Directa</label>
                                 <div className="relative">
-                                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-turquoise-200/30" weight="light" />
+                                    <Phone className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-turquoise-200/30" weight="light" />
                                     <input
                                         type="tel"
                                         name="phone"
@@ -215,7 +215,7 @@ export default function ContactForm({ className = '', compact = false }) {
                             <div className="space-y-1">
                                 <label className={labelClasses}>Organización</label>
                                 <div className="relative">
-                                    <Building className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-turquoise-200/30" weight="light" />
+                                    <Building className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-turquoise-200/30" weight="light" />
                                     <input
                                         type="text"
                                         name="company"
@@ -235,7 +235,7 @@ export default function ContactForm({ className = '', compact = false }) {
                                 name="service"
                                 value={formData.service}
                                 onChange={handleChange}
-                                className="w-full px-6 py-4 bg-white/[0.03] border border-white/[0.08] rounded-2xl font-body text-base text-white focus:outline-none focus:border-turquoise-400/50 transition-all backdrop-blur-md appearance-none cursor-pointer"
+                                className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-white/[0.03] border border-white/[0.08] rounded-2xl font-body text-base text-white focus:outline-none focus:border-turquoise-400/50 transition-all backdrop-blur-md appearance-none cursor-pointer"
                             >
                                 <option value="" className="bg-[#044D57]">-- Selecciona Especialidad --</option>
                                 <option value="Automatización" className="bg-[#044D57]">Automatización y Control</option>
@@ -253,7 +253,7 @@ export default function ContactForm({ className = '', compact = false }) {
                         <div className="space-y-1">
                             <label className={labelClasses}>Detalles del Proyecto</label>
                             <div className="relative">
-                                <MessageSquare className="absolute left-4 top-5 w-5 h-5 text-turquoise-200/30" weight="light" />
+                                <MessageSquare className="absolute left-3 sm:left-4 top-5 w-5 h-5 text-turquoise-200/30" weight="light" />
                                 <textarea
                                     name="message"
                                     value={formData.message}
@@ -277,7 +277,7 @@ export default function ContactForm({ className = '', compact = false }) {
                             disabled={status === 'loading'}
                             whileHover={{ scale: 1.01, y: -2 }}
                             whileTap={{ scale: 0.99 }}
-                            className="w-full py-6 bg-turquoise-500 text-[#022C32] font-header font-black text-sm uppercase tracking-[0.3em] rounded-2xl shadow-2xl shadow-turquoise-500/20 hover:bg-turquoise-400 transition-all flex items-center justify-center gap-4 relative overflow-hidden group"
+                            className="w-full py-4 sm:py-6 bg-turquoise-500 text-[#022C32] font-header font-black text-xs sm:text-sm uppercase tracking-[0.3em] rounded-2xl shadow-2xl shadow-turquoise-500/20 hover:bg-turquoise-400 transition-all flex items-center justify-center gap-4 relative overflow-hidden group"
                         >
                             {/* Pearl Glow Line */}
                             <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />

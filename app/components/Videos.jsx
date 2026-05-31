@@ -395,7 +395,7 @@ export default function Videos() {
 
     return (
         <>
-            <section id="videos" className="relative py-20 md:py-28 bg-[#022C32] overflow-hidden">
+            <section id="videos" className="relative py-16 md:py-28 bg-[#022C32] overflow-hidden">
                 {/* Subtle grid */}
                 <div
                     className="absolute inset-0 opacity-[0.025] pointer-events-none"
@@ -405,7 +405,7 @@ export default function Videos() {
                     }}
                 />
 
-                <div className="container mx-auto px-6 relative z-10">
+                <div className="container mx-auto px-4 sm:px-6 relative z-10">
 
                     {/* Header */}
                     <div className="mb-14">
@@ -413,7 +413,7 @@ export default function Videos() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="flex flex-col md:flex-row md:items-end justify-between gap-6"
+                            className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6"
                         >
                             <div>
                                 <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full mb-5 backdrop-blur-xl">
@@ -422,7 +422,7 @@ export default function Videos() {
                                         Ingeniería 360° · Soluciones Integrales
                                     </span>
                                 </div>
-                                <h2 className="text-white font-header font-black text-3xl md:text-5xl tracking-tighter leading-none uppercase">
+                                <h2 className="text-white font-header font-black text-2xl sm:text-3xl md:text-5xl tracking-tighter leading-none uppercase">
                                     Una fracción de<br />
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-turquoise-300 to-turquoise-100">
                                         lo que hacemos
@@ -443,7 +443,7 @@ export default function Videos() {
                     </div>
 
                     {/* Videos grid + extra card */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
                         {VIDEOS.map((video, index) => (
                             <VideoCard
                                 key={video.id}
@@ -460,7 +460,7 @@ export default function Videos() {
                             viewport={{ once: true, margin: '-50px' }}
                             transition={{ delay: VIDEOS.length * 0.08, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                         >
-                            <Link href="/soluciones" className="group flex flex-col h-full min-h-[280px] rounded-2xl overflow-hidden border border-dashed border-white/15 hover:border-turquoise-400/50 transition-all duration-500 bg-white/[0.02] hover:bg-white/[0.04] relative">
+                            <Link href="/soluciones" className="group flex flex-col h-full min-h-[240px] sm:min-h-[280px] rounded-2xl overflow-hidden border border-dashed border-white/15 hover:border-turquoise-400/50 transition-all duration-500 bg-white/[0.02] hover:bg-white/[0.04] relative">
                                 {/* Gradient bg */}
                                 <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 80%, rgba(45,212,191,0.06) 0%, transparent 70%)' }} />
 
@@ -501,7 +501,7 @@ export default function Videos() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="mt-14 text-center"
+                        className="mt-10 md:mt-14 text-center"
                     >
                         <Link
                             href="/portfolio"

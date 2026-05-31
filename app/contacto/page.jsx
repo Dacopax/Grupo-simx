@@ -13,7 +13,7 @@ export default function ContactoPage() {
             <Navbar theme="dark" />
 
             {/* Page Hero Banner - Elite Matte Turquoise */}
-            <section className="relative pt-48 pb-32 overflow-hidden bg-gradient-to-br from-[#086775] via-[#075A66] to-[#044D57]">
+            <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-br from-[#086775] via-[#075A66] to-[#044D57]">
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay z-[2]"
                     style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}
                 />
@@ -45,17 +45,17 @@ export default function ContactoPage() {
                         </span>
                     </motion.div>
 
-                    <h1 className="font-header font-black text-6xl md:text-9xl text-white tracking-tighter leading-[0.85] mb-12">
+                    <h1 className="font-header font-black text-4xl sm:text-5xl md:text-9xl text-white tracking-tighter leading-[0.85] mb-12">
                         Canales de <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-turquoise-200 to-turquoise-400 animate-gradient-x">Enlace</span>
                     </h1>
 
-                    <p className="font-body text-turquoise-100/40 text-xl md:text-2xl mt-4 max-w-3xl leading-relaxed font-light italic">
+                    <p className="font-body text-turquoise-100/40 text-sm sm:text-base md:text-2xl mt-4 max-w-3xl leading-relaxed font-light italic">
                         Operamos desde el corazón del sureste mexicano, orquestando soluciones para los desafíos más complejos de la <span className="text-white font-bold">industria global.</span>
                     </p>
 
                     {/* Quick Jump Matrix - Arctic Glass */}
-                    <div className="flex flex-wrap gap-4 mt-24">
+                    <div className="flex flex-wrap gap-3 mt-12 md:mt-24">
                         {[
                             { icon: Phone, label: "937 116 5300", sub: "Línea Directa" },
                             { icon: Mail, label: "contacto@gruposimx.com", sub: "Enlace Digital" },
@@ -85,9 +85,9 @@ export default function ContactoPage() {
             <Contact />
 
             {/* Map Section - Elite Technical Interface */}
-            <section className="py-32 bg-[#044D57] relative overflow-hidden border-t border-white/5">
+            <section className="py-20 md:py-32 bg-[#044D57] relative overflow-hidden border-t border-white/5">
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col lg:flex-row gap-16 items-start">
+                    <div className="flex flex-col lg:flex-row gap-10 md:gap-16 items-start">
                         <div className="lg:w-1/3 w-full">
                             <motion.div 
                                 initial={{ opacity: 0, y: 10 }}
@@ -101,7 +101,7 @@ export default function ContactoPage() {
                                 </span>
                             </motion.div>
 
-                            <h2 className="font-header font-black text-4xl md:text-5xl text-white mb-10 tracking-tighter leading-tight uppercase">
+                            <h2 className="font-header font-black text-3xl sm:text-4xl md:text-5xl text-white mb-10 tracking-tighter leading-tight uppercase">
                                 Nuestras <br /><span className="text-turquoise-400">Oficinas</span>
                             </h2>
 
@@ -136,7 +136,7 @@ export default function ContactoPage() {
                         </div>
 
                         {/* Map iframe - Arctic Lens */}
-                        <div className="lg:w-2/3 w-full h-[500px] rounded-[3rem] overflow-hidden border border-white/10 group relative">
+                        <div className="lg:w-2/3 w-full h-[300px] sm:h-[400px] md:h-[500px] rounded-[3rem] overflow-hidden border border-white/10 group relative">
                             <div className="absolute inset-0 z-10 pointer-events-none border-[12px] border-[#044D57]/50" />
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.5!2d-93.385!3d17.825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDQ5JzMwLjAiTiA5M8KwMjMnMDYuMCJX!5e0!3m2!1ses!2smx!4v1"

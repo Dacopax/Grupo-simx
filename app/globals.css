@@ -90,15 +90,15 @@ body {
    ============================================ */
 
 .section-label {
-    @apply font-header font-black text-xs uppercase tracking-[0.6em] text-turquoise-300;
+    @apply font-header font-black text-[10px] sm:text-xs uppercase tracking-[0.4em] sm:tracking-[0.6em] text-turquoise-300;
 }
 
 .section-title {
-    @apply font-header font-black text-5xl md:text-8xl tracking-tighter leading-none uppercase;
+    @apply font-header font-black text-4xl sm:text-5xl md:text-8xl tracking-tighter leading-none uppercase;
 }
 
 .body-text {
-    @apply font-body text-base md:text-xl leading-relaxed font-light italic;
+    @apply font-body text-sm sm:text-base md:text-xl leading-relaxed font-light italic;
 }
 
 .card-title {
@@ -191,4 +191,28 @@ body {
 /* Remove all light mode legacy styles */
 [data-theme='light'] {
     display: none !important;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE OVERRIDES
+   ============================================ */
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Prevent text overflow on mobile */
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    h1, h2, h3, .section-title {
+        word-break: break-word;
+    }
 }

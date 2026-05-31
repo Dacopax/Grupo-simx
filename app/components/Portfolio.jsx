@@ -34,7 +34,7 @@ export default function Portfolio() {
     const [selectedProject, setSelectedProject] = useState(null);
 
     return (
-        <section id="portfolio" className="py-32 relative overflow-hidden bg-[#044D57]">
+        <section id="portfolio" className="py-20 md:py-32 relative overflow-hidden bg-[#044D57]">
             {/* Architectural Textures */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
                 style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}
@@ -50,12 +50,12 @@ export default function Portfolio() {
 
             <div className="container mx-auto px-6 relative z-10">
                 {/* Section Header */}
-                <div className="text-center mb-24">
+                <div className="text-center mb-16 md:mb-24">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-4 px-6 py-2 bg-white/5 border border-white/10 rounded-2xl mb-12"
+                        className="inline-flex items-center gap-3 md:gap-4 px-6 py-2 bg-white/5 border border-white/10 rounded-2xl mb-12"
                     >
                         <div className="w-2 h-2 rounded-full bg-turquoise-400 animate-pulse" />
                         <span className="font-header font-black text-xs uppercase tracking-[0.4em] text-turquoise-200">
@@ -63,17 +63,17 @@ export default function Portfolio() {
                         </span>
                     </motion.div>
                     
-                    <h2 className="font-header font-black text-5xl md:text-8xl text-white tracking-tighter leading-none mb-12 uppercase">
+                    <h2 className="font-header font-black text-4xl sm:text-5xl md:text-8xl text-white tracking-tighter leading-none mb-12 uppercase">
                         Nuestra <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-turquoise-200 to-white animate-gradient-x">Trayectoria</span>
                     </h2>
                     
-                    <p className="font-body text-turquoise-100/40 text-xl md:text-2xl max-w-4xl mx-auto italic font-light">
+                    <p className="font-body text-turquoise-100/40 text-base sm:text-lg md:text-2xl max-w-4xl mx-auto italic font-light">
                         Hitos de innovación y precisión técnica desplegados en los sectores más exigentes.
                     </p>
                 </div>
 
                 {/* Portfolio Grid - Arctic Glass Matrix */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
                     {projects?.map((project, index) => {
                         const Icon = categoryIcons[project.category] || Hexagon;
 
@@ -85,7 +85,7 @@ export default function Portfolio() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8, delay: index * 0.1 }}
                                 onClick={() => setSelectedProject(project)}
-                                className="group relative h-[600px] rounded-[3.5rem] overflow-hidden bg-white/[0.03] border border-white/10 hover:border-turquoise-400/40 transition-all duration-700 cursor-pointer"
+                                className="group relative h-[450px] sm:h-[600px] rounded-[2rem] sm:rounded-[3.5rem] overflow-hidden bg-white/[0.03] border border-white/10 hover:border-turquoise-400/40 transition-all duration-700 cursor-pointer"
                             >
                                 {/* Industrial Backdrop */}
                                 <div className="absolute inset-0 z-0 text-white">
@@ -99,21 +99,21 @@ export default function Portfolio() {
                                 </div>
 
                                 {/* Content Wrapper */}
-                                <div className="relative h-full p-12 flex flex-col justify-end z-20">
+                                <div className="relative h-full p-6 sm:p-8 md:p-12 flex flex-col justify-end z-20">
                                     {/* Category Badge */}
-                                    <div className="absolute top-12 left-12">
+                                    <div className="absolute top-6 left-6 sm:top-12 sm:left-12">
                                         <div className="px-6 py-2 rounded-full bg-turquoise-500 text-[#022C32] text-[11px] font-black uppercase tracking-[0.4em] shadow-2xl">
                                             {project.category}
                                         </div>
                                     </div>
 
                                     <div className="transform group-hover:-translate-y-4 transition-transform duration-500">
-                                        <div className="flex items-center gap-4 mb-6">
+                                        <div className="flex items-center gap-3 md:gap-4 mb-6">
                                             <Icon weight="light" className="w-8 h-8 text-turquoise-400" />
                                             <div className="h-px w-12 bg-white/20" />
                                         </div>
 
-                                        <h3 className="text-3xl font-header font-black text-white mb-6 uppercase tracking-tighter leading-tight group-hover:text-turquoise-200">
+                                        <h3 className="text-2xl sm:text-3xl font-header font-black text-white mb-6 uppercase tracking-tighter leading-tight group-hover:text-turquoise-200">
                                             {project.title}
                                         </h3>
 
@@ -140,7 +140,7 @@ export default function Portfolio() {
             {/* Project Details Modal - Elite Arctic Dashboard */}
             <AnimatePresence>
                 {selectedProject && (
-                    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-8">
+                    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 md:p-8">
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -158,7 +158,7 @@ export default function Portfolio() {
                             onClick={(e) => e.stopPropagation()}
                         >
                             {/* Modal Header */}
-                            <div className="relative h-80 w-full flex-shrink-0 group">
+                            <div className="relative h-56 sm:h-80 w-full flex-shrink-0 group">
                                 <NextImage
                                     src={selectedProject.imageUrl || '/Logo-3 detallado.png'}
                                     alt={selectedProject.title}
@@ -169,12 +169,12 @@ export default function Portfolio() {
 
                                 <button
                                     onClick={() => setSelectedProject(null)}
-                                    className="absolute top-10 right-10 z-10 p-4 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-white hover:bg-turquoise-500 hover:text-[#022C32] transition-all"
+                                    className="absolute top-4 right-4 sm:top-10 sm:right-10 z-10 p-4 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-white hover:bg-turquoise-500 hover:text-[#022C32] transition-all"
                                 >
                                     <X className="w-6 h-6" weight="bold" />
                                 </button>
 
-                                <div className="absolute bottom-10 left-12">
+                                <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-12">
                                     <div className="px-6 py-2 rounded-full bg-turquoise-500 text-[#022C32] text-xs font-black uppercase tracking-[0.4em] shadow-2xl">
                                         CASO DE ÉXITO: {selectedProject.category}
                                     </div>
@@ -182,10 +182,10 @@ export default function Portfolio() {
                             </div>
 
                             {/* Modal Content - Dashboard Layout */}
-                            <div className="flex-1 min-h-0 p-12 md:p-16 overflow-y-auto custom-scrollbar">
-                                <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                            <div className="flex-1 min-h-0 p-6 sm:p-8 md:p-12 lg:p-16 overflow-y-auto custom-scrollbar">
+                                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-16">
                                     <div className="lg:col-span-2">
-                                        <h3 className="text-4xl md:text-6xl font-header font-black text-white mb-10 uppercase tracking-tighter leading-none">
+                                        <h3 className="text-2xl sm:text-3xl md:text-6xl font-header font-black text-white mb-10 uppercase tracking-tighter leading-none">
                                             {selectedProject.title}
                                         </h3>
                                         
@@ -193,7 +193,7 @@ export default function Portfolio() {
                                             <h4 className="font-header font-black text-xs uppercase tracking-[0.4em] text-turquoise-400 mb-6 border-b border-white/10 pb-4">
                                                 // ALCANCE OPERATIVO
                                             </h4>
-                                            <p className="text-turquoise-100/40 font-body text-xl leading-relaxed italic font-light">
+                                            <p className="text-turquoise-100/40 font-body text-sm sm:text-base md:text-xl leading-relaxed italic font-light">
                                                 {selectedProject.alcance}
                                             </p>
                                         </div>
@@ -202,9 +202,9 @@ export default function Portfolio() {
                                             <h4 className="font-header font-black text-xs uppercase tracking-[0.5em] text-turquoise-400 mb-8 border-b border-white/10 pb-4">
                                                 // KPI & LOGROS OBTENIDOS
                                             </h4>
-                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                                                 {selectedProject?.benefits?.map((benefit, idx) => (
-                                                    <div key={idx} className="flex items-center gap-4 p-6 rounded-2xl bg-white/5 border border-white/5 group hover:border-turquoise-400/20 transition-all">
+                                                    <div key={idx} className="flex items-center gap-3 md:gap-4 p-6 rounded-2xl bg-white/5 border border-white/5 group hover:border-turquoise-400/20 transition-all">
                                                         <div className="w-2 h-2 rounded-full bg-turquoise-500 shadow-[0_0_10px_rgba(45,212,191,1)]" />
                                                         <span className="text-white/70 font-header font-black text-xs uppercase tracking-widest leading-relaxed">
                                                             {benefit}
@@ -216,7 +216,7 @@ export default function Portfolio() {
                                     </div>
 
                                     <div className="space-y-8">
-                                        <div className="p-10 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-xl">
+                                        <div className="p-6 sm:p-8 md:p-10 rounded-[1.5rem] sm:rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-xl">
                                             <Globe className="w-12 h-12 text-turquoise-400 mb-6" weight="light" />
                                             <h4 className="font-header font-black text-xs uppercase tracking-[0.4em] text-white mb-4">Impacto Global</h4>
                                             <p className="text-turquoise-100/30 text-xs leading-relaxed italic">
@@ -224,7 +224,7 @@ export default function Portfolio() {
                                             </p>
                                         </div>
 
-                                        <div className="p-10 rounded-[2.5rem] bg-turquoise-500 shadow-2xl shadow-turquoise-500/20">
+                                        <div className="p-6 sm:p-8 md:p-10 rounded-[1.5rem] sm:rounded-[2.5rem] bg-turquoise-500 shadow-2xl shadow-turquoise-500/20">
                                             <h4 className="font-header font-black text-xs uppercase tracking-[0.4em] text-[#022C32] mb-4">Metodología Simx</h4>
                                             <p className="text-[#022C32]/70 text-xs leading-relaxed font-bold">
                                                 Diseño - Implementación - Optimización Continua.

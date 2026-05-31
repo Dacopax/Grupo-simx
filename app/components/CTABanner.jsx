@@ -11,7 +11,7 @@ import {
 
 export default function CTABanner() {
     return (
-        <section id="cta" className="relative py-32 md:py-48 overflow-hidden bg-[#044D57]">
+        <section id="cta" className="relative py-20 md:py-48 overflow-hidden bg-[#044D57]">
             {/* Architectural Textures */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
                 style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}
@@ -47,20 +47,20 @@ export default function CTABanner() {
                         </span>
                     </motion.div>
 
-                    <h2 className="text-white font-header font-black text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.95] mb-12 uppercase">
+                    <h2 className="text-white font-header font-black text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.95] mb-12 uppercase">
                         Transformamos<br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-turquoise-200 to-white animate-gradient-x">tu visión en</span><br />
                         ingeniería 4.0
                     </h2>
 
-                    <p className="text-white/90 font-body text-xl md:text-2xl leading-relaxed mb-16 max-w-4xl mx-auto italic font-light">
+                    <p className="text-white/90 font-body text-base sm:text-lg md:text-2xl leading-relaxed mb-16 max-w-4xl mx-auto italic font-light">
                         Ya sea automatización compleja o un sistema embebido personalizado — <span className="text-white font-bold">Grupo SIMX</span> despliega el equipo especializado para materializar tu reto técnico.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
                         <a
                             href="/contacto"
-                            className="group relative flex items-center gap-6 px-12 py-8 bg-white text-[#022C32] rounded-[2rem] font-header font-black text-xs uppercase tracking-[0.3em] overflow-hidden transition-all hover:bg-turquoise-400"
+                            className="group relative flex items-center gap-6 px-8 py-6 sm:px-12 sm:py-8 bg-white text-[#022C32] rounded-[2rem] font-header font-black text-xs uppercase tracking-[0.3em] overflow-hidden transition-all hover:bg-turquoise-400"
                         >
                             Cotizar
                             <CaretRight weight="bold" className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -69,7 +69,7 @@ export default function CTABanner() {
                         
                         <a
                             href="tel:9371165300"
-                            className="flex items-center gap-4 px-12 py-8 bg-white/5 border border-white/10 text-white rounded-[2rem] font-header font-black text-xs uppercase tracking-[0.3em] backdrop-blur-xl hover:bg-white/10 transition-all group"
+                            className="flex items-center gap-4 px-8 py-6 sm:px-12 sm:py-8 bg-white/5 border border-white/10 text-white rounded-[2rem] font-header font-black text-xs uppercase tracking-[0.3em] backdrop-blur-xl hover:bg-white/10 transition-all group"
                         >
                             <Phone weight="light" size={20} className="text-turquoise-400 group-hover:scale-110 transition-transform" />
                             937 116 5300

@@ -25,7 +25,7 @@ export default function About() {
     ];
 
     return (
-        <section id="about" className="relative py-32 md:py-48 overflow-hidden bg-gradient-to-br from-[#086775] via-[#075A66] to-[#044D57]">
+        <section id="about" className="relative py-20 md:py-48 overflow-hidden bg-gradient-to-br from-[#086775] via-[#075A66] to-[#044D57]">
             {/* Matte Texture Overlays */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
                 style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}
@@ -41,7 +41,7 @@ export default function About() {
 
             <div className="container mx-auto px-6 relative z-10">
                 {/* Section Header */}
-                <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 mb-32 items-center">
+                <div className="flex flex-col lg:flex-row gap-10 lg:gap-32 mb-16 lg:mb-32 items-center">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -53,16 +53,16 @@ export default function About() {
                             <span className="w-2.5 h-2.5 bg-turquoise-400 rounded-full animate-pulse shadow-[0_0_12px_rgba(138,245,255,0.6)]"></span>
                             <span className="text-turquoise-200 font-header font-black text-xs uppercase tracking-[0.4em]">// QUIÉNES SOMOS</span>
                         </div>
-                        <h2 className="text-white font-header font-black text-5xl md:text-8xl uppercase tracking-tighter mb-12 leading-[0.85]">
+                        <h2 className="text-white font-header font-black text-4xl sm:text-5xl md:text-8xl uppercase tracking-tighter mb-12 leading-[0.85]">
                             Ingeniería <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-turquoise-200 to-white animate-gradient-x">Sin Límites</span>
                         </h2>
                         
                         <div className="space-y-8 max-w-xl">
-                            <p className="text-white/80 font-body text-xl leading-relaxed">
+                            <p className="text-white/80 font-body text-base sm:text-lg md:text-xl leading-relaxed">
                                 <strong className="text-turquoise-200 font-black">Grupo SIMX</strong> es el centro neurálgico de la implementación tecnológica en México, materializando visiones complejas en el sector público y privado.
                             </p>
-                            <p className="text-white/90 font-body text-lg leading-relaxed font-light">
+                            <p className="text-white/90 font-body text-sm sm:text-base md:text-lg leading-relaxed font-light">
                                 Nuestra fortaleza reside en el <strong className="text-white font-semibold">Puente de Convergencia</strong>: donde la mecánica pesada se encuentra con el software embebido de alta precisión.
                             </p>
                         </div>
@@ -76,7 +76,7 @@ export default function About() {
                         </div>
                     </motion.div>
 
-                    <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
                         {stats.map((stat, i) => (
                             <motion.div
                                 key={stat.label}
@@ -85,7 +85,7 @@ export default function About() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8, delay: i * 0.1 }}
                                 whileHover={{ y: -10 }}
-                                className="relative p-10 rounded-[3rem] bg-white/[0.03] border border-white/[0.08] backdrop-blur-2xl group overflow-hidden"
+                                className="relative p-6 sm:p-8 md:p-10 rounded-[2rem] sm:rounded-[3rem] bg-white/[0.03] border border-white/[0.08] backdrop-blur-2xl group overflow-hidden"
                             >
                                 {/* Pearl Glow Effect */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -93,14 +93,14 @@ export default function About() {
                                 <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mb-8 relative z-10 shadow-2xl group-hover:scale-110 transition-transform duration-500`}>
                                     <stat.icon className="w-8 h-8 text-white" weight="light" />
                                 </div>
-                                <div className="text-5xl font-header font-black text-white mb-2 tracking-tighter relative z-10">{stat.value}</div>
+                                <div className="text-3xl sm:text-4xl md:text-5xl font-header font-black text-white mb-2 tracking-tighter relative z-10">{stat.value}</div>
                                 <div className="text-xs font-header font-black uppercase tracking-[0.2em] text-turquoise-200/70 group-hover:text-turquoise-200 transition-colors relative z-10">{stat.label}</div>
                             </motion.div>
                         ))}
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
                     {/* Mission, Vision, Focus - Refactored as Arctic Glass */}
                     {[
                         { num: '01', title: 'Misión', subtitle: 'Solución Integral', icon: Target, desc: 'Proveer una gama de servicios de ingeniería multidisciplinaria que garantice el cumplimiento técnico de cada meta planteada.' },
@@ -114,7 +114,7 @@ export default function About() {
                             viewport={{ once: true }}
                             transition={{ duration: 1, delay: i * 0.15 }}
                             whileHover={{ y: -15 }}
-                            className="p-12 rounded-[4rem] bg-white/[0.04] border border-white/[0.08] backdrop-blur-3xl group overflow-hidden relative"
+                            className="p-8 sm:p-10 md:p-12 rounded-[2rem] sm:rounded-[3rem] md:rounded-[4rem] bg-white/[0.04] border border-white/[0.08] backdrop-blur-3xl group overflow-hidden relative"
                         >
                             <div className="absolute inset-0 opacity-0 group-hover:opacity-[0.03] transition-opacity duration-700 pointer-events-none" 
                                  style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/carbon-fibre.png")' }} />
@@ -123,8 +123,8 @@ export default function About() {
                                 <card.icon className="h-8 w-8 text-turquoise-200" weight="light" />
                             </div>
                             <div className="text-turquoise-200 font-mono text-xs uppercase tracking-[0.4em] mb-4">// {card.num} · {card.title}</div>
-                            <h3 className="text-white font-header font-black text-3xl mb-6 uppercase tracking-tighter group-hover:text-turquoise-200 transition-colors">{card.subtitle}</h3>
-                            <p className="font-body leading-relaxed text-zinc-100/80 group-hover:text-white transition-all duration-300 text-lg">
+                            <h3 className="text-white font-header font-black text-2xl md:text-3xl mb-6 uppercase tracking-tighter group-hover:text-turquoise-200 transition-colors">{card.subtitle}</h3>
+                            <p className="font-body leading-relaxed text-zinc-100/80 group-hover:text-white transition-all duration-300 text-sm sm:text-base md:text-lg">
                                 {card.desc}
                             </p>
                         </motion.div>

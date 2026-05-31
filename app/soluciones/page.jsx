@@ -25,7 +25,7 @@ export default function SolucionesPage() {
             <Navbar theme="dark" />
 
             {/* Page Hero - Elite Matte Turquoise */}
-            <section className="relative pt-48 pb-32 overflow-hidden bg-gradient-to-br from-[#086775] via-[#075A66] to-[#044D57]">
+            <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-br from-[#086775] via-[#075A66] to-[#044D57]">
                 {/* Architectural Textures */}
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay z-[2]"
                     style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}
@@ -66,17 +66,17 @@ export default function SolucionesPage() {
                             </span>
                         </motion.div>
 
-                        <h1 className="font-header font-black text-6xl md:text-9xl text-white tracking-tighter leading-[0.85] mb-12">
+                        <h1 className="font-header font-black text-4xl sm:text-5xl md:text-9xl text-white tracking-tighter leading-[0.85] mb-12">
                             Ingeniería de <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-turquoise-200 to-turquoise-400 animate-gradient-x">Precisión</span>
                         </h1>
 
-                        <p className="font-body text-white/90 text-xl md:text-2xl mt-4 max-w-3xl leading-relaxed font-light italic">
+                        <p className="font-body text-white/90 text-sm sm:text-base md:text-2xl mt-4 max-w-3xl leading-relaxed font-light italic">
                             Orquestamos soluciones integrales que cubren el ciclo completo de cualquier reto industrial bajo el estándar de <span className="text-white font-bold italic">calidad absoluta.</span>
                         </p>
 
                         {/* Quick Jump Matrix - Arctic Glass */}
-                        <div className="flex flex-wrap gap-4 mt-16">
+                        <div className="flex flex-wrap gap-3 mt-12 md:mt-16">
                             {[
                                 { title: 'Automatización', icon: MonitorPlay },
                                 { title: 'Electrónica', icon: Cpu },
@@ -108,7 +108,7 @@ export default function SolucionesPage() {
             </div>
 
             {/* Final CTA - Elite Terminal Style */}
-            <section className="relative py-32 bg-gradient-to-t from-[#022C32] to-[#044D57] overflow-hidden">
+            <section className="relative py-20 md:py-32 bg-gradient-to-t from-[#022C32] to-[#044D57] overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
                     style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/carbon-fibre.png")' }}
                 />
@@ -119,10 +119,10 @@ export default function SolucionesPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="font-header font-black text-4xl md:text-7xl text-white mb-8 tracking-tighter leading-none">
+                        <h2 className="font-header font-black text-3xl sm:text-4xl md:text-7xl text-white mb-8 tracking-tighter leading-none">
                             ¿Necesita una solución <br /> <span className="text-turquoise-400">a medida?</span>
                         </h2>
-                        <p className="font-body text-white/90 mb-12 max-w-2xl mx-auto italic text-lg md:text-xl">
+                        <p className="font-body text-white/90 mb-12 max-w-2xl mx-auto italic text-sm sm:text-base md:text-xl">
                             Nuestro equipo multidisciplinario orquesta arquitecturas de ingeniería exclusivas para los retos que el mercado genérico no puede resolver.
                         </p>
                         <Link

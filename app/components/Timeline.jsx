@@ -83,7 +83,7 @@ export default function Timeline() {
     });
 
     return (
-        <section ref={containerRef} className="relative py-32 bg-[#044D57] overflow-hidden">
+        <section ref={containerRef} className="relative py-20 md:py-32 bg-[#044D57] overflow-hidden">
             {/* Architectural Textures */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
                 style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}
@@ -98,11 +98,11 @@ export default function Timeline() {
             />
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="text-center mb-32">
+                <div className="text-center mb-16 md:mb-32">
                     <span className="font-header font-black text-[12px] uppercase tracking-[0.7em] text-turquoise-400 mb-6 block">
                         // SECUENCIA OPERATIVA
                     </span>
-                    <h2 className="font-header font-black text-5xl md:text-8xl text-white tracking-tighter leading-none">
+                    <h2 className="font-header font-black text-4xl sm:text-5xl md:text-8xl text-white tracking-tighter leading-none mb-16 md:mb-32">
                         Trayectoria de <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-turquoise-200 to-white animate-gradient-x">Precisión</span>
                     </h2>
                 </div>
@@ -122,7 +122,7 @@ export default function Timeline() {
                         className="absolute left-4 top-0 bottom-0 w-[2px] bg-gradient-to-b from-turquoise-500 to-white md:hidden z-20"
                     />
 
-                    <div className="space-y-40">
+                    <div className="space-y-24 md:space-y-40">
                         {timelineData.map((item, i) => (
                             <motion.div 
                                 key={item.year}
@@ -136,8 +136,8 @@ export default function Timeline() {
                                 <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-white border-4 border-turquoise-500 -translate-x-1/2 top-0 md:top-12 z-30 shadow-[0_0_20px_rgba(45,212,191,0.8)] animate-pulse" />
 
                                 {/* Content Card: Arctic Glass */}
-                                <div className={`w-full md:w-[45%] pl-14 md:pl-0 ${i % 2 === 0 ? 'md:pr-16' : 'md:pl-16'}`}>
-                                    <div className="p-12 rounded-[4rem] bg-white/[0.03] border border-white/[0.08] backdrop-blur-3xl relative group hover:bg-white/[0.06] transition-all duration-700">
+                                <div className={`w-full md:w-[45%] pl-12 md:pl-0 ${i % 2 === 0 ? 'md:pr-16' : 'md:pl-16'}`}>
+                                    <div className="p-6 sm:p-8 md:p-12 rounded-[2rem] sm:rounded-[3rem] md:rounded-[4rem] bg-white/[0.03] border border-white/[0.08] backdrop-blur-3xl relative group hover:bg-white/[0.06] transition-all duration-700">
                                         
                                         {/* Deployment Year Label */}
                                         <div className="flex items-center gap-4 mb-8">
@@ -148,11 +148,11 @@ export default function Timeline() {
                                             <item.icon className="w-6 h-6 text-turquoise-400" weight="light" />
                                         </div>
 
-                                        <h3 className="font-header font-black text-2xl md:text-3xl text-white mb-6 uppercase tracking-tight group-hover:text-turquoise-200 transition-colors">
+                                        <h3 className="font-header font-black text-xl md:text-3xl text-white mb-6 uppercase tracking-tight group-hover:text-turquoise-200 transition-colors">
                                             {item.title}
                                         </h3>
 
-                                        <p className="font-body text-turquoise-100/40 text-lg leading-relaxed mb-10 italic font-light">
+                                        <p className="font-body text-turquoise-100/40 text-sm sm:text-base md:text-lg leading-relaxed mb-10 italic font-light">
                                             {item.desc}
                                         </p>
 

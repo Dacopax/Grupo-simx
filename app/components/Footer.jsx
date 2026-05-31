@@ -32,12 +32,12 @@ export default function Footer() {
                     transition={{ duration: 1 }}
                     className="pb-20 border-b border-white/5"
                 >
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 lg:gap-24">
 
                         {/* Column 1: Brand */}
                         <div className="lg:col-span-4 space-y-10">
                             <Link href="/" className="inline-block group">
-                                <div className="relative h-16 w-56">
+                                <div className="relative h-12 w-40 sm:h-14 sm:w-48 md:h-16 md:w-56">
                                     <NextImage
                                         src="/GrupoSimxLogo.png"
                                         alt="Grupo Simx"
@@ -47,7 +47,7 @@ export default function Footer() {
                                 </div>
                             </Link>
 
-                            <p className="text-white/80 font-body text-lg leading-relaxed max-w-sm font-light">
+                            <p className="text-white/80 font-body text-sm sm:text-base md:text-lg leading-relaxed max-w-sm font-light">
                                 <span className="text-simx-brand-300">Ingeniería Multidisciplinaria</span> de alto impacto. Transformamos desafíos operativos en ventajas competitivas globales.
                             </p>
 
@@ -151,7 +151,7 @@ export default function Footer() {
                 </motion.div>
 
                 {/* Bottom Bar */}
-                <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="py-6 md:py-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-white/80 text-xs font-body">
                         © {new Date().getFullYear()} Grupo Simx. Todos los derechos reservados.
                     </p>

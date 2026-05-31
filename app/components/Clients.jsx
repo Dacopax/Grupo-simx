@@ -38,7 +38,7 @@ export default function Clients() {
     return (
         <section
             id="clientes"
-            className="relative py-20 md:py-28 bg-[#011A1E] overflow-hidden border-t border-white/5"
+            className="relative py-16 md:py-28 bg-[#011A1E] overflow-hidden border-t border-white/5"
         >
             {/* Subtle grid */}
             <div
@@ -53,7 +53,7 @@ export default function Clients() {
             {/* Glow center */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-[#2DD4BF]/4 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10">
 
                 {/* ── Section header ── */}
                 <motion.div
@@ -68,7 +68,7 @@ export default function Clients() {
                             Partners &amp; Ecosistema Tecnológico
                         </span>
                     </div>
-                    <h2 className="text-white font-header font-black text-3xl md:text-5xl tracking-tighter leading-none uppercase">
+                    <h2 className="text-white font-header font-black text-2xl sm:text-3xl md:text-5xl tracking-tighter leading-none uppercase">
                         Marcas con las que<br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-turquoise-300 to-turquoise-100">
                             operamos y distribuimos
@@ -94,9 +94,9 @@ export default function Clients() {
                         {TRACK.map((brand, i) => (
                             <div
                                 key={`${brand.name}-${i}`}
-                                className="flex-shrink-0 w-56 h-36 bg-white rounded-2xl flex flex-col items-center justify-center p-5 border border-gray-100/80 shadow-sm hover:shadow-md transition-shadow duration-300"
+                                className="flex-shrink-0 w-44 h-28 sm:w-52 sm:h-32 md:w-56 md:h-36 bg-white rounded-xl sm:rounded-2xl flex flex-col items-center justify-center p-5 border border-gray-100/80 shadow-sm hover:shadow-md transition-shadow duration-300"
                             >
-                                <div className="w-36 h-16 flex items-center justify-center mb-2">
+                                <div className="w-28 h-12 sm:w-32 sm:h-14 md:w-36 md:h-16 flex items-center justify-center mb-2">
                                     <img
                                         src={brand.logo}
                                         alt={brand.name}

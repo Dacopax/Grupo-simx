@@ -22,7 +22,7 @@ export default function NosotrosPage() {
             <Navbar theme="dark" />
 
             {/* Page Hero - Elite Matte Turquoise */}
-            <section className="relative pt-48 pb-32 overflow-hidden bg-gradient-to-br from-[#086775] via-[#075A66] to-[#044D57]">
+            <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-br from-[#086775] via-[#075A66] to-[#044D57]">
                 {/* Architectural Textures */}
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay z-[2]"
                     style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}
@@ -63,12 +63,12 @@ export default function NosotrosPage() {
                             </span>
                         </motion.div>
 
-                        <h1 className="font-header font-black text-6xl md:text-9xl text-white tracking-tighter leading-[0.85] mb-12">
+                        <h1 className="font-header font-black text-4xl sm:text-5xl md:text-9xl text-white tracking-tighter leading-[0.85] mb-12">
                             Liderando la <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-turquoise-200 to-turquoise-400 animate-gradient-x">Evolución</span> Técnica
                         </h1>
 
-                        <p className="font-body text-turquoise-100/40 text-xl md:text-2xl mt-4 max-w-3xl leading-relaxed font-light italic">
+                        <p className="font-body text-turquoise-100/40 text-sm sm:text-base md:text-2xl mt-4 max-w-3xl leading-relaxed font-light italic">
                             En <span className="text-white font-bold">Grupo Simx</span>, fusionamos precisión algorítmica y visión humana para materializar las arquitecturas industriales del mañana.
                         </p>
                     </div>
@@ -77,7 +77,7 @@ export default function NosotrosPage() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
-                        className="flex flex-wrap gap-12 mt-24 pt-16 border-t border-white/5"
+                        className="flex flex-wrap gap-6 md:gap-12 mt-12 md:mt-24 pt-16 border-t border-white/5"
                     >
                         {[
                             { icon: ShieldCheck, text: "Precisión Certificada" },

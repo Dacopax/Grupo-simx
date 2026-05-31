@@ -61,7 +61,7 @@ export default function Hero() {
 
                 {/* Main Headline */}
                 <div className="mb-8">
-                    <h1 className="font-header font-black text-5xl md:text-7xl lg:text-8xl text-white tracking-tighter leading-[0.95]">
+                    <h1 className="font-header font-black text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white tracking-tighter leading-[0.95]">
                         <motion.span
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
-                    className="text-white/85 font-body text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-12"
+                    className="text-white/85 font-body text-sm sm:text-base md:text-xl leading-relaxed max-w-3xl mx-auto mb-12 px-4"
                 >
                     Automatización, electrónica, IoT, redes y manufactura avanzada para el sector industrial y de petróleo. Diseño a la medida, mano de obra calificada, resultados comprobados.
                 </motion.p>
@@ -100,15 +100,15 @@ export default function Hero() {
                 >
                     <a
                         href="/soluciones"
-                        className="group inline-flex items-center gap-3 px-10 py-5 bg-[#00E5FF] text-[#00171A] font-header font-black text-xs uppercase tracking-widest rounded-full transition-all duration-300 shadow-lg shadow-[#00E5FF]/20 hover:scale-105 hover:shadow-xl hover:shadow-[#00E5FF]/30"
+                        className="group inline-flex items-center gap-3 px-6 sm:px-10 py-4 sm:py-5 bg-[#00E5FF] text-[#00171A] font-header font-black text-[10px] sm:text-xs uppercase tracking-widest rounded-full transition-all duration-300 shadow-lg shadow-[#00E5FF]/20 hover:scale-105 hover:shadow-xl hover:shadow-[#00E5FF]/30"
                     >
                         Ver Servicios
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                     </a>
 
                     <a
                         href="/portfolio"
-                        className="inline-flex items-center gap-3 px-10 py-5 bg-white/5 border border-white/20 text-white font-header font-black text-xs uppercase tracking-widest rounded-full hover:bg-white/10 hover:border-white/30 transition-all backdrop-blur-md"
+                        className="inline-flex items-center gap-3 px-6 sm:px-10 py-4 sm:py-5 bg-white/5 border border-white/20 text-white font-header font-black text-[10px] sm:text-xs uppercase tracking-widest rounded-full hover:bg-white/10 hover:border-white/30 transition-all backdrop-blur-md"
                     >
                         Portafolio
                         <ShieldCheck className="w-5 h-5 text-[#00E5FF]" />

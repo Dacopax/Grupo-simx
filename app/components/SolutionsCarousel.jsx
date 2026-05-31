@@ -131,7 +131,7 @@ function Modal({ sol, onClose }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-8"
+            className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 md:p-8"
             onClick={onClose}
         >
             {/* backdrop */}
@@ -171,7 +171,7 @@ function Modal({ sol, onClose }) {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 overflow-y-auto p-8 md:p-10">
+                <div className="flex-1 overflow-y-auto p-6 sm:p-8 md:p-10">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                         {/* Left — main */}
                         <div className="md:col-span-2">
@@ -247,7 +247,7 @@ function SolutionCard({ sol, onClick }) {
             onClick={() => onClick(sol)}
             className={`group relative rounded-2xl overflow-hidden cursor-pointer border border-white/[0.07] hover:border-white/20 transition-all duration-500 ${isLarge ? 'md:col-span-2' : ''}`}
             style={{
-                minHeight: isLarge ? 340 : 280,
+                minHeight: isLarge ? 300 : 260,
                 boxShadow: '0 4px 24px rgba(0,0,0,0.3)',
             }}
             whileHover={{ y: -4, boxShadow: `0 20px 48px -12px ${sol.accentColor}30` }}
@@ -263,7 +263,7 @@ function SolutionCard({ sol, onClick }) {
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/10 group-hover:via-black/40 transition-all duration-700" />
 
             {/* Content */}
-            <div className="relative z-10 h-full flex flex-col justify-between p-7">
+            <div className="relative z-10 h-full flex flex-col justify-between p-5 sm:p-7">
                 {/* Top */}
                 <div className="flex items-start justify-between">
                     <div
@@ -287,7 +287,7 @@ function SolutionCard({ sol, onClick }) {
                 {/* Bottom */}
                 <div>
                     <p className="text-white/80 font-mono text-[11px] uppercase tracking-widest mb-2">{sol.subtitle}</p>
-                    <h3 className={`text-white font-header font-black uppercase tracking-tighter leading-none mb-3 group-hover:text-turquoise-100 transition-colors ${isLarge ? 'text-2xl md:text-3xl' : 'text-xl'}`}>
+                    <h3 className={`text-white font-header font-black uppercase tracking-tighter leading-none mb-3 group-hover:text-turquoise-100 transition-colors ${isLarge ? 'text-xl md:text-3xl' : 'text-xl'}`}>
                         {sol.title}
                     </h3>
                     <p className="text-white/85 font-body text-xs leading-relaxed mb-5 line-clamp-2">
@@ -335,7 +335,7 @@ export default function SolutionsCarousel() {
 
     return (
         <>
-            <section className="relative py-20 bg-[#011A1E] overflow-hidden">
+            <section className="relative py-16 md:py-20 bg-[#011A1E] overflow-hidden">
                 {/* Subtle grid */}
                 <div
                     className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -345,10 +345,10 @@ export default function SolutionsCarousel() {
                     }}
                 />
 
-                <div className="container mx-auto px-6 relative z-10">
+                <div className="container mx-auto px-4 sm:px-6 relative z-10">
 
                     {/* ── Filter tabs ── */}
-                    <div className="flex flex-wrap gap-2 mb-10">
+                    <div className="flex flex-wrap gap-2 mb-8 md:mb-10">
                         {CATEGORIES.map(cat => (
                             <button
                                 key={cat}
@@ -377,7 +377,7 @@ export default function SolutionsCarousel() {
                     {/* ── Masonry-style grid ── */}
                     <motion.div
                         layout
-                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4"
                     >
                         <AnimatePresence mode="popLayout">
                             {filtered.map(sol => (
@@ -395,7 +395,7 @@ export default function SolutionsCarousel() {
                         initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="mt-12 flex justify-center"
+                        className="mt-8 md:mt-12 flex justify-center"
                     >
                         <a
                             href="/contacto"

@@ -18,7 +18,7 @@ export default function WhyUs() {
     const { features, stats: bigNumbers } = config?.ui?.whyUs || { features: [], stats: [] };
 
     return (
-        <section id="por-que" className="relative py-32 md:py-48 bg-gradient-to-br from-[#044D57] to-[#022C32] overflow-hidden">
+        <section id="por-que" className="relative py-20 md:py-48 bg-gradient-to-br from-[#044D57] to-[#022C32] overflow-hidden">
             {/* Tech grid texture - Refined for "Matte" feel */}
             <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
                 style={{
@@ -32,7 +32,7 @@ export default function WhyUs() {
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-turquoise-400/5 blur-[120px] pointer-events-none -translate-x-1/2 translate-y-1/2" />
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
 
                     {/* Left — Features (The "Why") */}
                     <motion.div
@@ -48,12 +48,12 @@ export default function WhyUs() {
                             </span>
                         </div>
                         
-                        <h2 className="font-header font-black text-5xl md:text-7xl text-white tracking-tighter leading-[0.9] mb-16">
+                        <h2 className="font-header font-black text-4xl sm:text-5xl md:text-7xl text-white tracking-tighter leading-[0.9] mb-16">
                             Ingeniería con<br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-turquoise-200 to-white animate-gradient-x">propósito real</span>
                         </h2>
 
-                        <div className="grid gap-10">
+                        <div className="grid gap-8 md:gap-10">
                             {features.map((f, i) => {
                                 const Icon = ICON_MAP[f.icon] || Target;
                                 return (
@@ -63,7 +63,7 @@ export default function WhyUs() {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: i * 0.1, duration: 0.8 }}
-                                        className="flex gap-8 group"
+                                        className="flex gap-4 md:gap-8 group"
                                     >
                                         <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center bg-white/[0.03] border border-white/[0.08] rounded-2xl group-hover:bg-white/[0.05] group-hover:border-turquoise-400/30 transition-all duration-500 overflow-hidden relative">
                                             {/* Pearl Glow Hover */}
@@ -71,10 +71,10 @@ export default function WhyUs() {
                                             <Icon className="w-7 h-7 text-turquoise-100 relative z-10" weight="light" />
                                         </div>
                                         <div className="pt-2">
-                                            <div className="font-header font-black text-white text-xl mb-2 tracking-tight group-hover:text-turquoise-200 transition-colors duration-300 uppercase">
+                                            <div className="font-header font-black text-white text-base sm:text-lg md:text-xl mb-2 tracking-tight group-hover:text-turquoise-200 transition-colors duration-300 uppercase">
                                                 {f.title}
                                             </div>
-                                            <p className="font-body text-white text-base leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                                            <p className="font-body text-white text-sm sm:text-base leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                                                 {f.desc}
                                             </p>
                                         </div>
@@ -90,13 +90,13 @@ export default function WhyUs() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
-                        className="grid grid-cols-2 gap-4 md:gap-6"
+                        className="grid grid-cols-2 gap-3 md:gap-6"
                     >
                         {bigNumbers.map((item, i) => (
                             <motion.div
                                 key={item.label}
                                 whileHover={{ y: -8 }}
-                                className="bg-white/[0.02] border border-white/[0.06] backdrop-blur-3xl p-10 md:p-14 rounded-[4rem] relative overflow-hidden group shadow-2xl"
+                                className="bg-white/[0.02] border border-white/[0.06] backdrop-blur-3xl p-6 md:p-10 lg:p-14 rounded-[2rem] sm:rounded-[3rem] md:rounded-[4rem] relative overflow-hidden group shadow-2xl"
                             >
                                 {/* Carbon Fibre Texture Overlay */}
                                 <div className="absolute inset-0 opacity-0 group-hover:opacity-[0.02] transition-opacity duration-700 pointer-events-none" 
@@ -105,7 +105,7 @@ export default function WhyUs() {
                                 {/* Flowing Glow Accent */}
                                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-turquoise-400/40 via-turquoise-200/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
 
-                                <div className={`font-header font-black text-6xl md:text-8xl leading-none tracking-tighter mb-4 text-white group-hover:text-turquoise-200 transition-colors duration-500`}>
+                                <div className={`font-header font-black text-4xl sm:text-5xl md:text-8xl leading-none tracking-tighter mb-4 text-white group-hover:text-turquoise-200 transition-colors duration-500`}>
                                     {item.num}
                                     {item.sup && (
                                         <sup className="text-3xl text-turquoise-400 align-super ml-1 opacity-60 group-hover:opacity-100 transition-opacity">{item.sup}</sup>

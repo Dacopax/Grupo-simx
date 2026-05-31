@@ -54,7 +54,7 @@ export default function PortfolioPage() {
             <Navbar theme="dark" />
 
             {/* Page Hero - Elite Matte Turquoise */}
-            <section className="relative pt-48 pb-32 overflow-hidden bg-gradient-to-br from-[#086775] via-[#075A66] to-[#044D57]">
+            <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-br from-[#086775] via-[#075A66] to-[#044D57]">
                 {/* Architectural Textures */}
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay z-[2]"
                     style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}
@@ -84,12 +84,12 @@ export default function PortfolioPage() {
                             </span>
                         </motion.div>
 
-                        <h1 className="font-header font-black text-6xl md:text-9xl text-white tracking-tighter leading-[0.85] mb-12">
+                        <h1 className="font-header font-black text-4xl sm:text-5xl md:text-9xl text-white tracking-tighter leading-[0.85] mb-12">
                             Matriz de <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-turquoise-200 to-turquoise-400 animate-gradient-x">Resultados</span>
                         </h1>
 
-                        <p className="font-body text-turquoise-100/40 text-xl md:text-2xl mt-4 max-w-3xl leading-relaxed font-light italic">
+                        <p className="font-body text-turquoise-100/40 text-sm sm:text-base md:text-2xl mt-4 max-w-3xl leading-relaxed font-light italic">
                             Explora nuestra trayectoria de implementación técnica, donde cada proyecto es una declaración de <span className="text-white font-bold italic">precisión industrial.</span>
                         </p>
                     </div>
@@ -100,7 +100,7 @@ export default function PortfolioPage() {
             <div className="relative px-6 pb-32 pt-24 bg-[#044D57]">
                 <div className="container mx-auto">
                     {/* Filter & Search Bar - Arctic Glass Dock */}
-                    <div className="flex flex-col lg:flex-row gap-6 mb-20 bg-white/5 backdrop-blur-2xl p-6 rounded-[2.5rem] border border-white/10 sticky top-24 z-30 shadow-2xl">
+                    <div className="flex flex-col lg:flex-row gap-4 md:gap-6 mb-16 md:mb-20 bg-white/5 backdrop-blur-2xl p-6 rounded-[2.5rem] border border-white/10 sticky top-24 z-30 shadow-2xl">
                         {/* Search Input */}
                         <div className="relative flex-1 group">
                             <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-turquoise-400 group-focus-within:text-white transition-colors" weight="light" />
@@ -133,7 +133,7 @@ export default function PortfolioPage() {
                     </div>
 
                     {/* Projects Grid - Arctic Glass Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-32">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 mb-20 md:mb-32">
                         <AnimatePresence mode="popLayout">
                             {filteredProjects.map((project, index) => (
                                 <motion.div
@@ -328,17 +328,17 @@ export default function PortfolioPage() {
                             </span>
                         </motion.div>
                         
-                        <h2 className="font-header font-black text-5xl md:text-8xl text-white tracking-tighter leading-none mb-12 uppercase">
+                        <h2 className="font-header font-black text-4xl sm:text-5xl md:text-8xl text-white tracking-tighter leading-none mb-12 uppercase">
                             Clientes que <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-turquoise-200 to-turquoise-400 animate-gradient-x">Confían</span>
                         </h2>
                         
-                        <p className="font-body text-turquoise-100/40 text-xl md:text-2xl max-w-4xl mx-auto italic font-light leading-relaxed">
+                        <p className="font-body text-turquoise-100/40 text-sm sm:text-base md:text-2xl max-w-4xl mx-auto italic font-light leading-relaxed">
                             Más de 12 años transformando desafíos industriales en éxitos operativos bajo el estándar de <span className="text-white font-bold">excelencia absoluta.</span>
                         </p>
                     </div>
 
                     {/* Stats Matrix - Arctic Chips */}
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-32 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-20 md:mb-32 max-w-6xl mx-auto">
                         {[
                             { num: '500+', label: 'Proyectos\nEjecutados', icon: CheckCircle },
                             { num: '200+', label: 'Clientes\nSatisfechos', icon: Tag },
@@ -353,7 +353,7 @@ export default function PortfolioPage() {
                                 transition={{ delay: i * 0.1 }}
                                 className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 text-center hover:border-turquoise-400/30 transition-all group backdrop-blur-md"
                             >
-                                <div className="font-header font-black text-5xl md:text-6xl text-turquoise-400 mb-4 group-hover:scale-110 transition-transform leading-none">
+                                <div className="font-header font-black text-3xl sm:text-4xl md:text-6xl text-turquoise-400 mb-4 group-hover:scale-110 transition-transform leading-none">
                                     {stat.num}
                                 </div>
                                 <div className="font-header font-black text-[11px] uppercase tracking-[0.4em] text-turquoise-100/20 whitespace-pre-line">
@@ -364,11 +364,11 @@ export default function PortfolioPage() {
                     </div>
 
                     {/* Sectors Grid - Technical Overview */}
-                    <div className="mb-32">
+                    <div className="mb-20 md:mb-32">
                         <h3 className="font-header font-black text-xs text-turquoise-400 text-center mb-16 uppercase tracking-[0.6em]">
                             // SECTORES QUE IMPULSAMOS
                         </h3>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
                             {[
                                 { name: 'Aeropuertos', icon: '✈️', desc: 'ASUR' },
                                 { name: 'Educación', icon: '🎓', desc: 'UJAT · ITSC' },
@@ -394,7 +394,7 @@ export default function PortfolioPage() {
                     </div>
 
                     {/* Client Logos Wall - Monochromatic Trust */}
-                    <div className="mb-32">
+                    <div className="mb-20 md:mb-32">
                         <h3 className="font-header font-black text-xs text-turquoise-400 text-center mb-16 uppercase tracking-[0.6em]">
                             // ALGUNOS DE NUESTROS CLIENTES
                         </h3>
@@ -421,7 +421,7 @@ export default function PortfolioPage() {
                         viewport={{ once: true }}
                         className="text-center"
                     >
-                        <div className="inline-block p-12 md:p-16 bg-white/5 border border-white/10 backdrop-blur-xl rounded-[4rem] relative overflow-hidden group">
+                        <div className="inline-block p-6 sm:p-8 md:p-12 lg:p-16 bg-white/5 border border-white/10 backdrop-blur-xl rounded-[2rem] sm:rounded-[3rem] md:rounded-[4rem] relative overflow-hidden group">
                             <div className="absolute inset-0 bg-gradient-to-br from-turquoise-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                             
                             <p className="font-body text-turquoise-100/40 text-xl mb-12 max-w-2xl italic">

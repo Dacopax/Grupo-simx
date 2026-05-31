@@ -112,7 +112,7 @@ function ServicesContent() {
     }, [services, activeTab]);
 
     return (
-        <section id="services" className="py-28 relative overflow-hidden bg-[#070D10]">
+        <section id="services" className="py-16 md:py-28 relative overflow-hidden bg-[#070D10]">
             {/* Architectural Textures */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
                 style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}
@@ -128,7 +128,7 @@ function ServicesContent() {
 
             <div className="container mx-auto px-6 relative z-10">
                 {/* Section Header */}
-                <div className="text-center mb-24">
+                <div className="text-center mb-16 md:mb-24">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -141,17 +141,17 @@ function ServicesContent() {
                         </span>
                     </motion.div>
                     
-                    <h2 className="font-header font-black text-5xl md:text-8xl text-white tracking-tighter leading-none mb-12 uppercase">
+                    <h2 className="font-header font-black text-4xl sm:text-5xl md:text-8xl text-white tracking-tighter leading-none mb-12 uppercase">
                         Soluciones de <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-turquoise-200 to-white animate-gradient-x">Alto Nivel</span>
                     </h2>
                     
-                    <p className="font-body text-white/90 text-xl md:text-2xl max-w-4xl mx-auto italic font-light">
+                    <p className="font-body text-white/90 text-base sm:text-lg md:text-2xl max-w-4xl mx-auto italic font-light">
                         Orquestamos capacidades de ingeniería avanzada para los desafíos más complejos de la industria moderna.
                     </p>
                 </div>
 
                 {/* Tabs Navigation - Arctic Chips */}
-                <div className="flex flex-wrap items-center justify-center gap-4 mb-24">
+                <div className="flex flex-wrap items-center justify-center gap-3 mb-16 md:mb-24">
                     {categories.map((cat) => (
                         <button
                             key={cat.id}
@@ -172,7 +172,7 @@ function ServicesContent() {
                 </div>
 
                 {/* Services Grid - Arctic Glass Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 md:gap-8">
                     <AnimatePresence mode="popLayout">
                         {(filteredServices || []).map((service, index) => {
                             const Icon = serviceIcons[service.id] || Cpu;
@@ -186,7 +186,7 @@ function ServicesContent() {
                                     exit={{ opacity: 0, scale: 0.9 }}
                                     transition={{ duration: 0.5, delay: index * 0.05 }}
                                     onClick={() => setSelectedService(service)}
-                                    className="group relative h-[360px] rounded-2xl overflow-hidden border border-white/[0.08] hover:border-white/20 transition-all duration-500 cursor-pointer"
+                                    className="group relative h-[300px] sm:h-[360px] rounded-2xl overflow-hidden border border-white/[0.08] hover:border-white/20 transition-all duration-500 cursor-pointer"
                                     style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.3)' }}
                                     whileHover={{ y: -4, boxShadow: '0 20px 48px rgba(0,0,0,0.5)' }}
                                 >
@@ -203,7 +203,7 @@ function ServicesContent() {
                                     </div>
 
                                     {/* Content */}
-                                    <div className="relative h-full p-7 flex flex-col justify-between z-20">
+                                    <div className="relative h-full p-5 sm:p-7 flex flex-col justify-between z-20">
                                         {/* Top — icon */}
                                         <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center backdrop-blur-md group-hover:bg-turquoise-500 group-hover:border-turquoise-400 transition-all duration-500">
                                             <Icon className="w-5 h-5 text-turquoise-300 group-hover:text-[#022C32] transition-colors" weight="light" />
@@ -211,7 +211,7 @@ function ServicesContent() {
 
                                         {/* Bottom — text */}
                                         <div className="transform group-hover:-translate-y-2 transition-transform duration-500">
-                                            <h3 className="text-xl font-header font-black text-white mb-2 uppercase tracking-tighter leading-tight group-hover:text-turquoise-100 transition-colors">
+                                            <h3 className="text-base sm:text-lg md:text-xl font-header font-black text-white mb-2 uppercase tracking-tighter leading-tight group-hover:text-turquoise-100 transition-colors">
                                                 {service.title}
                                             </h3>
                                             <p className="text-white/85 font-body text-xs leading-relaxed mb-5 line-clamp-2 italic">
@@ -236,7 +236,7 @@ function ServicesContent() {
                 {/* Details Modal - Elite Arctic Dashboard */}
                 <AnimatePresence>
                     {selectedService && (
-                        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-8">
+                        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 md:p-8">
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -255,7 +255,7 @@ function ServicesContent() {
                                 onClick={(e) => e.stopPropagation()}
                             >
                                 {/* Modal Header */}
-                                <div className="relative h-80 w-full flex-shrink-0 group">
+                                <div className="relative h-56 sm:h-80 w-full flex-shrink-0 group">
                                     <NextImage
                                         src={serviceImages[selectedService.id] || '/marcas/Logo.png'}
                                         alt={selectedService.title}
@@ -266,12 +266,12 @@ function ServicesContent() {
 
                                     <button
                                         onClick={() => setSelectedService(null)}
-                                        className="absolute top-10 right-10 z-10 p-4 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-white hover:bg-turquoise-500 hover:text-[#022C32] transition-all"
+                                        className="absolute top-4 right-4 sm:top-10 sm:right-10 z-10 p-4 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-white hover:bg-turquoise-500 hover:text-[#022C32] transition-all"
                                     >
                                         <X className="w-6 h-6" weight="bold" />
                                     </button>
 
-                                    <div className="absolute bottom-10 left-12">
+                                    <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-12">
                                         <div className="px-6 py-2 rounded-full bg-turquoise-500 text-[#022C32] text-xs font-black uppercase tracking-[0.4em] shadow-2xl">
                                             {categories.find(c => c.id === categoryMap[selectedService.id])?.label || 'SOLUCIÓN TÉCNICA'}
                                         </div>
@@ -279,13 +279,13 @@ function ServicesContent() {
                                 </div>
 
                                 {/* Modal Content - Dashboard Layout */}
-                                <div className="flex-1 min-h-0 p-12 md:p-16 overflow-y-auto custom-scrollbar">
-                                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                                <div className="flex-1 min-h-0 p-6 sm:p-8 md:p-12 lg:p-16 overflow-y-auto custom-scrollbar">
+                                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-16">
                                         <div className="lg:col-span-2">
-                                            <h3 className="text-4xl md:text-6xl font-header font-black text-white mb-10 uppercase tracking-tighter leading-none">
+                                            <h3 className="text-2xl sm:text-3xl md:text-6xl font-header font-black text-white mb-10 uppercase tracking-tighter leading-none">
                                                 {selectedService.title}
                                             </h3>
-                                            <p className="text-white/90 font-body text-xl leading-relaxed mb-12 italic font-light">
+                                            <p className="text-white/90 font-body text-sm sm:text-base md:text-xl leading-relaxed mb-12 italic font-light">
                                                 {selectedService.description}
                                             </p>
 
@@ -293,7 +293,7 @@ function ServicesContent() {
                                                 <h4 className="font-header font-black text-xs uppercase tracking-[0.5em] text-turquoise-400 mb-8 border-b border-white/10 pb-4">
                                                     // ESPECIFICACIONES TÉCNICAS
                                                 </h4>
-                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                                                     {(selectedService.features || []).map((feature, idx) => (
                                                         <div key={idx} className="flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/5 group hover:border-turquoise-400/20 transition-all">
                                                             <div className="w-2 h-2 rounded-full bg-turquoise-500 shadow-[0_0_10px_rgba(45,212,191,1)]" />
@@ -305,7 +305,7 @@ function ServicesContent() {
                                         </div>
 
                                         <div className="space-y-8">
-                                            <div className="p-8 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-xl">
+                                            <div className="p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-xl">
                                                 <Hexagon className="w-12 h-12 text-turquoise-400 mb-6" weight="thin" />
                                                 <h4 className="font-header font-black text-xs uppercase tracking-[0.4em] text-white mb-4">Garantía Operativa</h4>
                                                 <p className="text-white/85 text-xs leading-relaxed italic">
@@ -313,7 +313,7 @@ function ServicesContent() {
                                                 </p>
                                             </div>
 
-                                            <div className="p-8 rounded-[2.5rem] bg-turquoise-500 shadow-2xl shadow-turquoise-500/20">
+                                            <div className="p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] bg-turquoise-500 shadow-2xl shadow-turquoise-500/20">
                                                 <h4 className="font-header font-black text-xs uppercase tracking-[0.4em] text-[#022C32] mb-4">Disponibilidad</h4>
                                                 <p className="text-[#022C32]/60 text-xs leading-relaxed font-bold">
                                                     Despliegue inmediato para sectores críticos como Oil & Gas, Manufactura y Energía.
@@ -322,7 +322,7 @@ function ServicesContent() {
 
                                             <a
                                                 href="/contacto"
-                                                className="flex items-center justify-center gap-6 w-full py-7 bg-white text-[#022C32] rounded-[2rem] font-header font-black text-xs uppercase tracking-[0.3em] hover:bg-turquoise-400 transition-all shadow-2xl"
+                                                className="flex items-center justify-center gap-6 w-full py-5 sm:py-7 bg-white text-[#022C32] rounded-[2rem] font-header font-black text-xs uppercase tracking-[0.3em] hover:bg-turquoise-400 transition-all shadow-2xl"
                                             >
                                                 Cotizar
                                                 <CaretRight weight="bold" className="w-5 h-5" />
@@ -341,7 +341,7 @@ function ServicesContent() {
 
 export default function Services() {
     return (
-        <Suspense fallback={<div className="py-32 text-center text-turquoise-400 font-header font-black uppercase tracking-widest animate-pulse">Cargando Matriz de Soluciones...</div>}>
+        <Suspense fallback={<div className="py-20 text-center text-turquoise-400 font-header font-black uppercase tracking-widest animate-pulse">Cargando Matriz de Soluciones...</div>}>
             <ServicesContent />
         </Suspense>
     );

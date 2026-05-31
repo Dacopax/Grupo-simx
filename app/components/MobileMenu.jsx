@@ -45,7 +45,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks = [], contact }) 
                         }}
                     />
 
-                    <div className="relative z-10 flex flex-col min-h-full p-8 md:p-12">
+                    <div className="relative z-10 flex flex-col min-h-full p-4 sm:p-6 md:p-8 lg:p-12">
                         {/* Header */}
                         <div className="flex items-center justify-between mb-16">
                             <div className="flex items-center gap-4">
@@ -77,13 +77,13 @@ export default function MobileMenu({ isOpen, onClose, navLinks = [], contact }) 
                                             <Link
                                                 href={link.href}
                                                 onClick={onClose}
-                                                className="group flex items-center justify-between p-6 rounded-[2rem] bg-white/[0.03] border border-white/5 hover:border-turquoise-400/40 transition-all duration-500"
+                                                className="group flex items-center justify-between p-4 sm:p-5 md:p-6 rounded-[1.5rem] sm:rounded-[2rem] bg-white/[0.03] border border-white/5 hover:border-turquoise-400/40 transition-all duration-500"
                                             >
                                                 <div className="flex items-center gap-6">
                                                     <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/5 group-hover:bg-turquoise-500 group-hover:text-[#022C32] transition-all duration-500">
                                                         <Icon weight="light" size={24} />
                                                     </div>
-                                                    <span className="text-white font-header font-black text-2xl uppercase tracking-tighter group-hover:text-turquoise-200 transition-colors">
+                                                    <span className="text-white font-header font-black text-xl sm:text-2xl uppercase tracking-tighter group-hover:text-turquoise-200 transition-colors">
                                                         {link.title}
                                                     </span>
                                                 </div>

@@ -10,7 +10,7 @@ export default function Ticker() {
     const doubled = Array.isArray(tickerItems) ? [...tickerItems, ...tickerItems] : [];
 
     return (
-        <div className="relative overflow-hidden bg-[#044D57] py-3 z-10 border-y border-white/5">
+        <div className="relative overflow-hidden bg-[#044D57] py-2 md:py-3 z-10 border-y border-white/5">
             {/* Left fade */}
             <div className="absolute left-0 top-0 h-full w-16 z-10 bg-gradient-to-r from-[#044D57] to-transparent pointer-events-none" />
             {/* Right fade */}

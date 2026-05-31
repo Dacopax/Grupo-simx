@@ -45,7 +45,7 @@ export default function HeroServices() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8, delay: i * 0.1 }}
-                                className="group relative flex items-center gap-6 p-10 transition-all duration-700 cursor-pointer overflow-hidden backdrop-blur-3xl hover:bg-white/[0.02]"
+                                className="group relative flex items-center gap-6 p-6 sm:p-8 md:p-10 transition-all duration-700 cursor-pointer overflow-hidden backdrop-blur-3xl hover:bg-white/[0.02]"
                             >
                                 {/* Industrial Indicator */}
                                 <div className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-transparent via-turquoise-500/0 to-transparent group-hover:via-turquoise-500/50 transition-all duration-700" />
