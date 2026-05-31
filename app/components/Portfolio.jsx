@@ -191,7 +191,7 @@ export default function Portfolio() {
                                         
                                         <div className="p-10 rounded-[3rem] bg-white/5 border border-white/10 backdrop-blur-xl mb-12">
                                             <h4 className="font-header font-black text-xs uppercase tracking-[0.4em] text-turquoise-400 mb-6 border-b border-white/10 pb-4">
-                                                // ALCANCE OPERATIVO
+                                                ALCANCE OPERATIVO
                                             </h4>
                                             <p className="text-turquoise-100/40 font-body text-sm sm:text-base md:text-xl leading-relaxed italic font-light">
                                                 {selectedProject.alcance}
@@ -200,7 +200,7 @@ export default function Portfolio() {
 
                                         <div className="space-y-6">
                                             <h4 className="font-header font-black text-xs uppercase tracking-[0.5em] text-turquoise-400 mb-8 border-b border-white/10 pb-4">
-                                                // KPI & LOGROS OBTENIDOS
+                                                KPI & LOGROS OBTENIDOS
                                             </h4>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                                                 {selectedProject?.benefits?.map((benefit, idx) => (

@@ -100,7 +100,7 @@ export default function Timeline() {
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-16 md:mb-32">
                     <span className="font-header font-black text-[12px] uppercase tracking-[0.7em] text-turquoise-400 mb-6 block">
-                        // SECUENCIA OPERATIVA
+                        SECUENCIA OPERATIVA
                     </span>
                     <h2 className="font-header font-black text-4xl sm:text-5xl md:text-8xl text-white tracking-tighter leading-none mb-16 md:mb-32">
                         Trayectoria de <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-turquoise-200 to-white animate-gradient-x">Precisión</span>

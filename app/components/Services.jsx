@@ -291,7 +291,7 @@ function ServicesContent() {
 
                                             <div className="space-y-6">
                                                 <h4 className="font-header font-black text-xs uppercase tracking-[0.5em] text-turquoise-400 mb-8 border-b border-white/10 pb-4">
-                                                    // ESPECIFICACIONES TÉCNICAS
+                                                    ESPECIFICACIONES TÉCNICAS
                                                 </h4>
                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                                                     {(selectedService.features || []).map((feature, idx) => (

@@ -366,7 +366,7 @@ export default function PortfolioPage() {
                     {/* Sectors Grid - Technical Overview */}
                     <div className="mb-20 md:mb-32">
                         <h3 className="font-header font-black text-xs text-turquoise-400 text-center mb-16 uppercase tracking-[0.6em]">
-                            // SECTORES QUE IMPULSAMOS
+                            SECTORES QUE IMPULSAMOS
                         </h3>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
                             {[
@@ -396,7 +396,7 @@ export default function PortfolioPage() {
                     {/* Client Logos Wall - Monochromatic Trust */}
                     <div className="mb-20 md:mb-32">
                         <h3 className="font-header font-black text-xs text-turquoise-400 text-center mb-16 uppercase tracking-[0.6em]">
-                            // ALGUNOS DE NUESTROS CLIENTES
+                            ALGUNOS DE NUESTROS CLIENTES
                         </h3>
                         <div className="flex flex-wrap justify-center gap-4 md:gap-6 opacity-30 hover:opacity-100 transition-opacity duration-1000">
                             {[

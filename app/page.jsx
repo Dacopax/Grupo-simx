@@ -74,7 +74,7 @@ export default function Home() {
                         className="text-center mb-24"
                     >
                         <span className="text-turquoise-400 font-header font-black text-xs uppercase tracking-[0.6em] mb-12 block">
-                            // UNIDAD DE ORQUESTACIÓN TÉCNICA
+                            UNIDAD DE ORQUESTACIÓN TÉCNICA
                         </span>
                         <h2 className="text-white font-header font-black text-4xl sm:text-5xl md:text-8xl tracking-tighter leading-none mb-8 uppercase">
                             Ingeniería de <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-turquoise-200 to-white animate-gradient-x">Alto Rango</span>
@@ -122,7 +122,7 @@ export default function Home() {
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col md:flex-row justify-between items-end gap-8 md:gap-12 mb-16 md:mb-24">
                         <div className="max-w-3xl">
-                            <span className="text-turquoise-400 font-header font-black text-xs uppercase tracking-[0.6em] mb-4 block">// ALCANCE OPERATIVO</span>
+                            <span className="text-turquoise-400 font-header font-black text-xs uppercase tracking-[0.6em] mb-4 block">ALCANCE OPERATIVO</span>
                             <h2 className="text-white font-header font-black text-4xl sm:text-5xl md:text-8xl tracking-tighter leading-none uppercase">
                                 Sectores que <br /> <span className="text-turquoise-400">atendemos</span>
                             </h2>

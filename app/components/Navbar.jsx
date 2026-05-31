@@ -121,7 +121,7 @@ export default function Navbar({ theme = 'dark' }) {
                     <div className="flex items-center justify-between h-16 md:h-24">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-                            <div className="relative h-10 w-36 sm:h-12 sm:w-44 md:h-16 md:w-60">
+                            <div className="relative h-12 w-44 sm:h-14 sm:w-52 md:h-16 md:w-60">
                                 <NextImage
                                     src="/GrupoSimxLogo.png"
                                     alt="Grupo Simx"

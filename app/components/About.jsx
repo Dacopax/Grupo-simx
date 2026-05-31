@@ -51,7 +51,7 @@ export default function About() {
                     >
                         <div className="inline-flex items-center gap-4 px-6 py-2.5 bg-white/5 border border-white/10 rounded-full mb-10">
                             <span className="w-2.5 h-2.5 bg-turquoise-400 rounded-full animate-pulse shadow-[0_0_12px_rgba(138,245,255,0.6)]"></span>
-                            <span className="text-turquoise-200 font-header font-black text-xs uppercase tracking-[0.4em]">// QUIÉNES SOMOS</span>
+                            <span className="text-turquoise-200 font-header font-black text-xs uppercase tracking-[0.4em]">QUIÉNES SOMOS</span>
                         </div>
                         <h2 className="text-white font-header font-black text-4xl sm:text-5xl md:text-8xl uppercase tracking-tighter mb-12 leading-[0.85]">
                             Ingeniería <br />
@@ -122,7 +122,7 @@ export default function About() {
                             <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-turquoise-500/20 group-hover:scale-110 transition-all duration-500 shadow-xl shadow-black/20">
                                 <card.icon className="h-8 w-8 text-turquoise-200" weight="light" />
                             </div>
-                            <div className="text-turquoise-200 font-mono text-xs uppercase tracking-[0.4em] mb-4">// {card.num} · {card.title}</div>
+                            <div className="text-turquoise-200 font-mono text-xs uppercase tracking-[0.4em] mb-4">{card.num} · {card.title}</div>
                             <h3 className="text-white font-header font-black text-2xl md:text-3xl mb-6 uppercase tracking-tighter group-hover:text-turquoise-200 transition-colors">{card.subtitle}</h3>
                             <p className="font-body leading-relaxed text-zinc-100/80 group-hover:text-white transition-all duration-300 text-sm sm:text-base md:text-lg">
                                 {card.desc}

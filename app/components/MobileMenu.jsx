@@ -105,7 +105,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks = [], contact }) 
                                     className="p-8 rounded-[2.5rem] bg-white/[0.03] border border-white/5 backdrop-blur-3xl"
                                 >
                                     <h4 className="font-header font-black text-xs uppercase tracking-[0.4em] text-turquoise-400 mb-8 border-b border-white/10 pb-4">
-                                        // CONEXIÓN DIRECTA
+                                        CONEXIÓN DIRECTA
                                     </h4>
                                     <div className="space-y-6">
                                         {(contact.phones || [])[0] && (
