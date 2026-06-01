@@ -121,15 +121,12 @@ export default function Navbar({ theme = 'dark' }) {
                     <div className="flex items-center justify-between h-20 md:h-24">
                         {/* Logo */}
                         <Link href="/" className="flex items-center group flex-shrink-0">
-                            <div className="relative h-16 w-52 sm:h-16 sm:w-52 md:h-20 md:w-72">
-                                <NextImage
-                                    src="/GrupoSimxLogo.png"
-                                    alt="Grupo Simx"
-                                    fill
-                                    className="object-contain brightness-0 invert"
-                                    priority
-                                />
-                            </div>
+                            <img
+                                src="/GrupoSimxLogo.png"
+                                alt="Grupo Simx"
+                                className="h-16 sm:h-16 md:h-20 w-auto brightness-0 invert block"
+                                style={{ marginLeft: '-4px' }}
+                            />
                         </Link>
 
                         {/* Mac Dock Navigation - Center */}
