@@ -144,7 +144,7 @@ function SlideContent({ slide, isActive }) {
     }[slide.textAlign];
 
     return (
-        <div className={`relative z-10 container mx-auto px-4 md:px-16 h-full flex items-center pt-28 md:pt-44`}>
+        <div className={`relative z-10 container mx-auto px-4 md:px-16 h-full flex items-center pt-32 md:pt-48`}>
             <div className={`flex flex-col md:flex-row w-full ${containerClass} gap-6 md:gap-12 items-center md:items-end`}>
                 
                 {/* Secondary Content: Stats and Button (Opposite side) */}
@@ -157,7 +157,7 @@ function SlideContent({ slide, isActive }) {
                             transition={{ duration: 0.6, delay: 0.8 }}
                             className="mb-8"
                         >
-                            <span className="block font-header font-black text-3xl sm:text-4xl md:text-6xl leading-none tracking-tighter" style={{ color: slide.accentColor }}>
+                            <span className="block font-header font-black text-2xl sm:text-3xl md:text-6xl leading-none tracking-tighter" style={{ color: slide.accentColor }}>
                                 {slide.stat.value}
                             </span>
                             <span className="text-white/60 font-mono text-[10px] uppercase tracking-[0.4em] block mt-2">
@@ -228,7 +228,7 @@ function SlideContent({ slide, isActive }) {
                                 transition={{ duration: 0.8, delay: 0.2 + i * 0.1 }}
                             >
                                 <span className="block font-header font-black text-white uppercase tracking-tighter leading-[0.9]"
-                                    style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)' }}>
+                                    style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)' }}>
                                     {line}
                                 </span>
                             </motion.div>
@@ -240,7 +240,7 @@ function SlideContent({ slide, isActive }) {
                         initial={{ opacity: 0, y: 20 }}
                         animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
-                        className="font-body text-lg sm:text-xl md:text-3xl font-light italic leading-tight"
+                        className="font-body text-base sm:text-lg md:text-3xl font-light italic leading-tight"
                         style={{ color: slide.accentColor }}
                     >
                         {slide.accent}
