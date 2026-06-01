@@ -35,9 +35,9 @@ export default function Footer() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 lg:gap-24">
 
                         {/* Column 1: Brand */}
-                        <div className="lg:col-span-4 space-y-10">
-                            <Link href="/" className="inline-block group">
-                                <div className="relative h-16 w-56 sm:h-16 sm:w-56 md:h-20 md:w-72">
+                        <div className="lg:col-span-4 flex flex-col items-center lg:items-start space-y-10">
+                            <Link href="/" className="inline-block group mb-8 lg:mb-0">
+                                <div className="relative h-24 w-80 sm:h-20 sm:w-72 md:h-20 md:w-72">
                                     <NextImage
                                         src="/GrupoSimxLogo.png"
                                         alt="Grupo Simx"
@@ -47,11 +47,11 @@ export default function Footer() {
                                 </div>
                             </Link>
 
-                            <p className="text-white/80 font-body text-sm sm:text-base md:text-lg leading-relaxed max-w-sm font-light">
+                            <p className="text-white/80 font-body text-sm sm:text-base md:text-lg leading-relaxed max-w-sm font-light text-center lg:text-left">
                                 <span className="text-simx-brand-300">Ingeniería Multidisciplinaria</span> de alto impacto. Transformamos desafíos operativos en ventajas competitivas globales.
                             </p>
 
-                            <div className="flex gap-4">
+                            <div className="flex gap-4 justify-center lg:justify-start">
                                 {[
                                     { icon: Instagram, href: `https://instagram.com/${(contact.social?.instagram || "").replace('@', '')}`, color: 'hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500' },
                                     { icon: Facebook, href: `https://facebook.com${contact.social?.facebook || ""}`, color: 'hover:bg-blue-600' },
