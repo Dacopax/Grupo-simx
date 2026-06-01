@@ -117,10 +117,10 @@ export default function Navbar({ theme = 'dark' }) {
                         : "bg-gradient-to-b from-black/70 to-transparent"
                 )}
             >
-                <div className="container mx-auto px-6">
+                <div className="container mx-auto px-4 sm:px-6">
                     <div className="flex items-center justify-between h-20 md:h-24">
                         {/* Logo */}
-                        <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
+                        <Link href="/" className="flex items-center group flex-shrink-0">
                             <div className="relative h-16 w-60 sm:h-16 sm:w-60 md:h-20 md:w-72">
                                 <NextImage
                                     src="/GrupoSimxLogo.png"
