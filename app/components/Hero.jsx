@@ -124,7 +124,7 @@ export default function Hero() {
                 >
                     {[
                         { label: 'Áreas de Especialidad', value: '7+' },
-                        { label: 'Proyectos Industriales', value: '6+' },
+                        { label: 'Proyectos Ejecutados', value: '500+' },
                         { label: 'Marcas Líderes', value: '10+' },
                         { label: 'Servicio Integral', value: '360°' }
                     ].map((stat, i) => (

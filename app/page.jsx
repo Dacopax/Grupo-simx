@@ -133,13 +133,13 @@ export default function Home() {
                             </p>
                             <div className="flex items-center gap-6">
                                 <div>
-                                    <span className="text-turquoise-400 font-header font-black text-4xl leading-none">6+</span>
+                                    <span className="text-turquoise-400 font-header font-black text-4xl leading-none">7+</span>
                                     <p className="text-white/60 font-mono text-xs uppercase tracking-widest mt-2">Sectores clave</p>
                                 </div>
                                 <div className="w-px h-16 bg-white/10" />
                                 <div>
-                                    <span className="text-turquoise-400 font-header font-black text-4xl leading-none">120+</span>
-                                    <p className="text-white/60 font-mono text-xs uppercase tracking-widest mt-2">Proyectos entregados</p>
+                                    <span className="text-turquoise-400 font-header font-black text-4xl leading-none">500+</span>
+                                    <p className="text-white/60 font-mono text-xs uppercase tracking-widest mt-2">Proyectos ejecutados</p>
                                 </div>
                             </div>
                         </div>
