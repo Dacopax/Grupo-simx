@@ -193,26 +193,4 @@ body {
     display: none !important;
 }
 
-/* ============================================
-   MOBILE RESPONSIVE OVERRIDES
-   ============================================ */
-
-html {
-    overflow-x: hidden;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-/* Prevent text overflow on mobile */
-@media (max-width: 640px) {
-    .container {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-    
-    h1, h2, h3, .section-title {
-        word-break: break-word;
-    }
-}
+
